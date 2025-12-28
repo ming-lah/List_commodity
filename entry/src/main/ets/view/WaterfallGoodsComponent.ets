@@ -50,29 +50,40 @@ export default struct WaterfallGoods {
   }
 
   build() {
+    const goods: Goods[] = this.homeDS.getGoods();
+    const leftColumnGoods: Goods[] = [];
+    const rightColumnGoods: Goods[] = [];
+    for (let i = 0; i < goods.length; i++) {
+      if (i % 2 === 0) {
+        leftColumnGoods.push(goods[i]);
+      } else {
+        rightColumnGoods.push(goods[i]);
+      }
+    }
+
     // Masonry 模拟：左右两列各自独立堆叠，避免 wrap 造成行高撑开后的空白
     Row() {
       // 左列：偶数索引
       Column() {
-        ForEach(this.homeDS.getGoods().filter((_, idx: number) => idx % 2 === 0), (g: Goods) => {
+        ForEach(leftColumnGoods, (g: Goods) => {
           Column() {
             this.GoodsCard(g)
           }
           .width('100%')
           .margin({ bottom: 12 })
-        })
+        }, (g: Goods) => g.id.toString())
       }
       .width('50%')
 
       // 右列：奇数索引
       Column() {
-        ForEach(this.homeDS.getGoods().filter((_, idx: number) => idx % 2 === 1), (g: Goods) => {
+        ForEach(rightColumnGoods, (g: Goods) => {
           Column() {
             this.GoodsCard(g)
           }
           .width('100%')
           .margin({ bottom: 12 })
-        })
+        }, (g: Goods) => g.id.toString())
       }
       .width('50%')
     }

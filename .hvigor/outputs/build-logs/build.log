@@ -17473,3 +17473,1222 @@ Require stack:
 [2025-12-21T21:59:13.700] [DEBUG] debug-file - session manager: send message to worker process.
 [2025-12-21T21:59:13.700] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
 [2025-12-21T21:59:13.700] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:42:14.189] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2025-12-23T11:42:22.272] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined
+}
+[2025-12-23T11:43:08.828] [DEBUG] debug-file - hvigorfile, require result:  { appTasks: [Getter] }
+[2025-12-23T11:43:09.245] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2025-12-23T11:43:09.255] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2025-12-23T11:43:09.351] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2025-12-23T11:43:09.496] [DEBUG] debug-file - Project task initialization takes 10 ms 
+[2025-12-23T11:43:09.527] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=release
+[2025-12-23T11:43:09.540] [DEBUG] debug-file - project has submodules:entry
+[2025-12-23T11:43:09.658] [DEBUG] debug-file - entry : clean cost memory 1.5857086181640625
+[2025-12-23T11:43:09.569] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:42:14.192] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.5',
+  dependencies: {},
+  execution: {},
+  logging: {},
+  debugging: {}
+}
+[2025-12-23T11:43:09.696] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2025-12-23T11:42:22.284] [DEBUG] debug-file - Since current hvigor version 6.0.5 differs from last hvigor version 
+      6.0.6, delete file-cache.json and task-cache.json.
+[2025-12-23T11:43:08.829] [DEBUG] debug-file - hvigorfile, binding system plugins { appTasks: [Getter] }
+[2025-12-23T11:43:09.247] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2025-12-23T11:43:09.257] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2025-12-23T11:43:09.483] [DEBUG] debug-file - Sdk init in 225 ms 
+[2025-12-23T11:43:09.496] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:43:09.527] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:43:09.555] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2025-12-23T11:43:09.659] [DEBUG] debug-file - runTaskFromQueue task cost before running: 47 s 399 ms 
+[2025-12-23T11:43:09.572] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2025-12-23T11:42:14.196] [DEBUG] debug-file - env: daemon=false
+[2025-12-23T11:43:09.701] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2025-12-23T11:42:22.287] [DEBUG] debug-file - Cache service initialization finished in 15 ms 
+[2025-12-23T11:43:09.248] [DEBUG] debug-file - Product 'default' build option initialized
+[2025-12-23T11:43:09.259] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer
+[2025-12-23T11:43:09.498] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:43:09.528] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:43:09.660] [INFO] debug-file - Finished :entry:clean... after 64 ms 
+[2025-12-23T11:43:09.563] [DEBUG] debug-file - load to the disk finished
+[2025-12-23T11:43:09.704] [DEBUG] debug-file - Current worker pool is stopped or closed.
+[2025-12-23T11:43:09.572] [DEBUG] debug-file - Module entry's total dependency: 0
+[2025-12-23T11:42:14.197] [DEBUG] debug-file - no-daemon, use the parent process.execArgv --max-old-space-size=8192,--max-semi-space-size=16,--expose-gc
+[2025-12-23T11:42:22.290] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:43:09.248] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2025-12-23T11:43:09.332] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2025-12-23T11:43:09.506] [DEBUG] debug-file - hvigorfile, require result:  { hapTasks: [Getter] }
+[2025-12-23T11:43:09.528] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:43:09.661] [DEBUG] debug-file - Executing task ::clean
+[2025-12-23T11:43:09.564] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:43:09.704] [DEBUG] debug-file - Clear worker 0.
+[2025-12-23T11:43:09.591] [DEBUG] debug-file - Configuration phase cost:47 s 304 ms 
+[2025-12-23T11:43:09.506] [DEBUG] debug-file - hvigorfile, binding system plugins { hapTasks: [Getter] }
+[2025-12-23T11:43:09.528] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:43:09.661] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-12-23T11:43:09.567] [DEBUG] debug-file - Module List_commodity Collected Dependency: 
+[2025-12-23T11:43:09.705] [DEBUG] debug-file - Worker 0 has been cleared.
+[2025-12-23T11:43:09.594] [DEBUG] debug-file - Configuration task cost before running: 47 s 335 ms 
+[2025-12-23T11:43:09.507] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- D:\Projects\List_commodity\hvigorfile.ts
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\cli\main\cli.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\bin\hvigor.js
+[2025-12-23T11:43:09.528] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:43:09.661] [DEBUG] debug-file - List_commodity : clean cost memory 0.02521514892578125
+[2025-12-23T11:43:09.567] [DEBUG] debug-file - Module List_commodity's total dependency: 0
+[2025-12-23T11:43:09.705] [DEBUG] debug-file - Current idle worker size: 1.
+[2025-12-23T11:43:09.595] [DEBUG] debug-file - Executing task :entry:clean
+[2025-12-23T11:43:09.529] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:43:09.661] [DEBUG] debug-file - runTaskFromQueue task cost before running: 47 s 401 ms 
+[2025-12-23T11:43:09.705] [DEBUG] debug-file - Current busy worker size: 0.
+[2025-12-23T11:43:09.596] [DEBUG] debug-file - clean: Worker pool is inactive.
+[2025-12-23T11:43:09.529] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:43:09.661] [INFO] debug-file - Finished ::clean... after 1 ms 
+[2025-12-23T11:43:09.705] [DEBUG] debug-file - Clear worker 1.
+[2025-12-23T11:43:09.661] [DEBUG] debug-file - Executing task :entry:init
+[2025-12-23T11:43:09.529] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:43:09.705] [DEBUG] debug-file - Worker 1 has been cleared.
+[2025-12-23T11:43:09.662] [DEBUG] debug-file - entry : init cost memory 0.0126953125
+[2025-12-23T11:43:09.529] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:43:09.705] [DEBUG] debug-file - Current idle worker size: 0.
+[2025-12-23T11:43:09.705] [DEBUG] debug-file - Current busy worker size: 0.
+[2025-12-23T11:43:09.529] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:43:09.662] [DEBUG] debug-file - runTaskFromQueue task cost before running: 47 s 402 ms 
+[2025-12-23T11:43:09.706] [DEBUG] debug-file - hvigor build process will be closed.
+[2025-12-23T11:43:09.529] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:43:09.662] [INFO] debug-file - Finished :entry:init... after 1 ms 
+[2025-12-23T11:43:09.712] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2025-12-23T11:43:09.530] [DEBUG] debug-file - Obtain build option for module 'entry' target 'default'in this build.
+[2025-12-23T11:43:09.662] [DEBUG] debug-file - Executing task ::init
+[2025-12-23T11:43:09.719] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2025-12-23T11:43:09.539] [DEBUG] debug-file - Module entry task initialization takes 8 ms 
+[2025-12-23T11:43:09.662] [DEBUG] debug-file - List_commodity : init cost memory 0.01363372802734375
+[2025-12-23T11:43:09.719] [DEBUG] debug-file - Current worker pool is terminated.
+[2025-12-23T11:43:09.539] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:43:09.663] [DEBUG] debug-file - runTaskFromQueue task cost before running: 47 s 403 ms 
+[2025-12-23T11:43:09.663] [INFO] debug-file - Finished ::init... after 1 ms 
+[2025-12-23T11:43:09.681] [DEBUG] debug-file - Obtain build option for module 'entry' target 'default'in this build.
+[2025-12-23T11:43:09.692] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2025-12-23T11:43:09.693] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2025-12-23T11:45:38.691] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2025-12-23T11:45:39.076] [DEBUG] debug-file - env: daemon=true
+[2025-12-23T11:45:38.693] [DEBUG] debug-file - env: hvigor-config.json5 content = {
+  modelVersion: '5.0.5',
+  dependencies: {},
+  execution: {},
+  logging: {},
+  debugging: {}
+}
+[2025-12-23T11:45:43.225] [DEBUG] debug-file - java daemon tryConnect failed Error: connect ECONNREFUSED 127.0.0.1:45050
+[2025-12-23T11:45:43.293] [DEBUG] debug-file - java daemon started at port 45050 pid 17436
+[2025-12-23T11:45:43.335] [DEBUG] debug-file - session manager: set active socket. socketId=YCxCUbApcdVakSCRAAAB
+[2025-12-23T11:45:44.218] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:45:44.234] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined
+}
+[2025-12-23T11:45:44.235] [DEBUG] debug-file - Cache service initialization finished in 1 ms 
+[2025-12-23T11:45:44.239] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:45:46.777] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2025-12-23T11:45:46.777] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2025-12-23T11:45:47.066] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2025-12-23T11:45:47.066] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2025-12-23T11:45:47.067] [DEBUG] debug-file - Product 'default' build option initialized
+[2025-12-23T11:45:47.067] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2025-12-23T11:45:47.069] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2025-12-23T11:45:47.072] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2025-12-23T11:45:47.075] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer
+[2025-12-23T11:45:47.079] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2025-12-23T11:45:47.083] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2025-12-23T11:45:47.140] [DEBUG] debug-file - Sdk init in 66 ms 
+[2025-12-23T11:45:47.148] [DEBUG] debug-file - Project task initialization takes 6 ms 
+[2025-12-23T11:45:47.148] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:45:47.149] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:45:47.156] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2025-12-23T11:45:47.156] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2025-12-23T11:45:47.157] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- D:\Projects\List_commodity\hvigorfile.ts
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2025-12-23T11:45:47.174] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=release
+[2025-12-23T11:45:47.175] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:45:47.176] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:45:47.176] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:45:47.176] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:45:47.176] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:45:47.177] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:45:47.177] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:45:47.177] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:45:47.177] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:45:47.177] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:45:47.177] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:45:47.178] [DEBUG] debug-file - Obtain build option for module 'entry' target 'default'in this build.
+[2025-12-23T11:45:47.186] [DEBUG] debug-file - Module entry task initialization takes 7 ms 
+[2025-12-23T11:45:47.186] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:45:47.212] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 25 ms 
+[2025-12-23T11:45:47.212] [DEBUG] debug-file - project has submodules:entry
+[2025-12-23T11:45:47.214] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2025-12-23T11:45:47.223] [DEBUG] debug-file - load to the disk finished
+[2025-12-23T11:45:47.224] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:45:47.228] [DEBUG] debug-file - Module List_commodity Collected Dependency: 
+[2025-12-23T11:45:47.229] [DEBUG] debug-file - Module List_commodity's total dependency: 0
+[2025-12-23T11:45:47.231] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:45:47.235] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2025-12-23T11:45:47.235] [DEBUG] debug-file - Module entry's total dependency: 0
+[2025-12-23T11:45:47.241] [DEBUG] debug-file - Configuration phase cost:3 s 5 ms 
+[2025-12-23T11:45:47.244] [DEBUG] debug-file - Configuration task cost before running: 3 s 20 ms 
+[2025-12-23T11:45:47.245] [DEBUG] debug-file - Executing task :entry:init
+[2025-12-23T11:45:47.245] [DEBUG] debug-file - entry : init cost memory 0.01801300048828125
+[2025-12-23T11:45:47.245] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 21 ms 
+[2025-12-23T11:45:47.246] [INFO] debug-file - Finished :entry:init... after 1 ms 
+[2025-12-23T11:45:47.246] [DEBUG] debug-file - Executing task ::init
+[2025-12-23T11:45:47.247] [DEBUG] debug-file - List_commodity : init cost memory 0.015350341796875
+[2025-12-23T11:45:47.247] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 23 ms 
+[2025-12-23T11:45:47.247] [INFO] debug-file - Finished ::init... after 1 ms 
+[2025-12-23T11:45:47.267] [DEBUG] debug-file - Obtain build option for module 'entry' target 'default'in this build.
+[2025-12-23T11:45:47.275] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2025-12-23T11:45:47.275] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2025-12-23T11:45:47.277] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-23T11:45:47.278] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-23T11:45:47.277] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2025-12-23T11:45:47.281] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2025-12-23T11:45:47.285] [DEBUG] debug-file - Cleanup worker 0.
+[2025-12-23T11:45:47.285] [DEBUG] debug-file - Worker 0 has been cleaned up.
+[2025-12-23T11:45:47.286] [DEBUG] debug-file - Current idle worker size: 1.
+[2025-12-23T11:45:47.286] [DEBUG] debug-file - Current resident worker size: 2.
+[2025-12-23T11:45:47.286] [DEBUG] debug-file - Cleanup worker 1.
+[2025-12-23T11:45:47.286] [DEBUG] debug-file - Worker 1 has been cleaned up.
+[2025-12-23T11:45:47.286] [DEBUG] debug-file - Current idle worker size: 0.
+[2025-12-23T11:45:47.286] [DEBUG] debug-file - Current resident worker size: 2.
+[2025-12-23T11:45:47.287] [DEBUG] debug-file - hvigor build process will be closed.
+[2025-12-23T11:45:47.291] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:45:47.291] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:45:47.293] [DEBUG] debug-file - worker[0] exits with exit code 0.
+[2025-12-23T11:45:47.294] [DEBUG] debug-file - worker[1] exits with exit code 0.
+[2025-12-23T11:45:47.804] [DEBUG] debug-file - session manager: set active socket. socketId=rnkSaRqsQFa0B51TAAAD
+[2025-12-23T11:45:47.830] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:45:47.838] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined
+}
+[2025-12-23T11:45:47.838] [DEBUG] debug-file - Cache service initialization finished in 1 ms 
+[2025-12-23T11:45:47.839] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:45:47.846] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2025-12-23T11:45:47.846] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2025-12-23T11:45:47.851] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2025-12-23T11:45:47.851] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2025-12-23T11:45:47.852] [DEBUG] debug-file - Product 'default' build option initialized
+[2025-12-23T11:45:47.852] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2025-12-23T11:45:47.853] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2025-12-23T11:45:47.854] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2025-12-23T11:45:47.858] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2025-12-23T11:45:47.900] [DEBUG] debug-file - Sdk init in 45 ms 
+[2025-12-23T11:45:47.903] [DEBUG] debug-file - Project task initialization takes 4 ms 
+[2025-12-23T11:45:47.904] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:45:47.904] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:45:47.910] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2025-12-23T11:45:47.911] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2025-12-23T11:45:47.912] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- D:\Projects\List_commodity\hvigorfile.ts
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2025-12-23T11:45:47.914] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=release
+[2025-12-23T11:45:47.915] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:45:47.915] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:45:47.915] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:45:47.915] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:45:47.915] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:45:47.915] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:45:47.916] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:45:47.916] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:45:47.916] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:45:47.916] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:45:47.916] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:45:47.916] [DEBUG] debug-file - Obtain build option for module 'entry' target 'default'in this build.
+[2025-12-23T11:45:47.918] [DEBUG] debug-file - Module entry task initialization takes 1 ms 
+[2025-12-23T11:45:47.918] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:45:47.941] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 23 ms 
+[2025-12-23T11:45:47.941] [DEBUG] debug-file - project has submodules:entry
+[2025-12-23T11:45:47.942] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2025-12-23T11:45:47.949] [DEBUG] debug-file - load to the disk finished
+[2025-12-23T11:45:47.950] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:45:47.951] [DEBUG] debug-file - Module List_commodity Collected Dependency: 
+[2025-12-23T11:45:47.951] [DEBUG] debug-file - Module List_commodity's total dependency: 0
+[2025-12-23T11:45:47.952] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:45:47.953] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2025-12-23T11:45:47.953] [DEBUG] debug-file - Module entry's total dependency: 0
+[2025-12-23T11:45:47.955] [DEBUG] debug-file - Configuration phase cost:117 ms 
+[2025-12-23T11:45:47.957] [DEBUG] debug-file - Configuration task cost before running: 123 ms 
+[2025-12-23T11:45:47.965] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2025-12-23T11:45:47.967] [DEBUG] debug-file - Task 'entry:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:48.246] [DEBUG] debug-file - current product is not Atomic service.
+[2025-12-23T11:45:48.247] [DEBUG] debug-file - Use tool [win32: JAVA_HOME, CLASSPATH]
+ [
+  { JAVA_HOME: 'D:\\Program\\DevEco Studio\\jbr' },
+  { CLASSPATH: undefined }
+]
+[2025-12-23T11:45:48.247] [DEBUG] debug-file - Use tool [win32: NODE_HOME]
+ [ { NODE_HOME: 'D:\\Program\\DevEco Studio\\tools\\node' } ]
+[2025-12-23T11:45:48.248] [DEBUG] debug-file - entry : default@PreBuild cost memory 4.798118591308594
+[2025-12-23T11:45:48.248] [DEBUG] debug-file - runTaskFromQueue task cost before running: 415 ms 
+[2025-12-23T11:45:48.250] [INFO] debug-file - Finished :entry:default@PreBuild... after 284 ms 
+[2025-12-23T11:45:48.252] [DEBUG] debug-file - Executing task :entry:default@CreateModuleInfo
+[2025-12-23T11:45:48.252] [DEBUG] debug-file - Task 'entry:default@CreateModuleInfo' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:48.253] [DEBUG] debug-file - entry : default@CreateModuleInfo cost memory 0.04206085205078125
+[2025-12-23T11:45:48.253] [DEBUG] debug-file - runTaskFromQueue task cost before running: 420 ms 
+[2025-12-23T11:45:48.253] [INFO] debug-file - Finished :entry:default@CreateModuleInfo... after 2 ms 
+[2025-12-23T11:45:48.256] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2025-12-23T11:45:48.256] [DEBUG] debug-file - Task 'entry:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:48.258] [DEBUG] debug-file - Change app api release type with 'Beta5'
+[2025-12-23T11:45:48.258] [DEBUG] debug-file - Change app compile API version with '6.0.0.47'
+[2025-12-23T11:45:48.258] [DEBUG] debug-file - Change app target API version with '60000020'
+[2025-12-23T11:45:48.258] [DEBUG] debug-file - Change app minimum API version with '50005017'
+[2025-12-23T11:45:48.259] [DEBUG] debug-file - Use cli appEnvironment
+[2025-12-23T11:45:48.262] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.1573028564453125
+[2025-12-23T11:45:48.263] [DEBUG] debug-file - runTaskFromQueue task cost before running: 429 ms 
+[2025-12-23T11:45:48.263] [INFO] debug-file - Finished :entry:default@MergeProfile... after 7 ms 
+[2025-12-23T11:45:48.266] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2025-12-23T11:45:48.267] [DEBUG] debug-file - Task 'entry:default@CreateBuildProfile' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:48.270] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.0637664794921875
+[2025-12-23T11:45:48.270] [DEBUG] debug-file - runTaskFromQueue task cost before running: 437 ms 
+[2025-12-23T11:45:48.270] [INFO] debug-file - Finished :entry:default@CreateBuildProfile... after 4 ms 
+[2025-12-23T11:45:48.272] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2025-12-23T11:45:48.273] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.01639556884765625
+[2025-12-23T11:45:48.273] [DEBUG] debug-file - runTaskFromQueue task cost before running: 440 ms 
+[2025-12-23T11:45:48.274] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2025-12-23T11:45:48.278] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2025-12-23T11:45:48.294] [DEBUG] debug-file - Task 'entry:default@GeneratePkgContextInfo' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:48.295] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.27605438232421875
+[2025-12-23T11:45:48.295] [DEBUG] debug-file - runTaskFromQueue task cost before running: 462 ms 
+[2025-12-23T11:45:48.296] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 19 ms 
+[2025-12-23T11:45:48.299] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2025-12-23T11:45:48.301] [DEBUG] debug-file - Task 'entry:default@ProcessProfile' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:48.308] [DEBUG] debug-file - [
+  'D:\\Program\\DevEco Studio\\tools\\node\\node.exe',
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\bin\\ark\\ts2abc.js',
+  '--target-api-version',
+  '17'
+]
+[2025-12-23T11:45:49.056] [DEBUG] debug-file - 12.0.6.0
+[2025-12-23T11:45:49.062] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 1.9865036010742188
+[2025-12-23T11:45:49.062] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 229 ms 
+[2025-12-23T11:45:49.062] [INFO] debug-file - Finished :entry:default@ProcessProfile... after 763 ms 
+[2025-12-23T11:45:49.065] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2025-12-23T11:45:49.072] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.0731353759765625
+[2025-12-23T11:45:49.073] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 239 ms 
+[2025-12-23T11:45:49.073] [INFO] debug-file - Finished :entry:default@ProcessRouterMap... after 8 ms 
+[2025-12-23T11:45:49.076] [DEBUG] debug-file - Executing task :entry:default@ProcessShareConfig
+[2025-12-23T11:45:49.080] [DEBUG] debug-file - entry : default@ProcessShareConfig cost memory 0.05999755859375
+[2025-12-23T11:45:49.080] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 247 ms 
+[2025-12-23T11:45:49.081] [INFO] debug-file - Finished :entry:default@ProcessShareConfig... after 5 ms 
+[2025-12-23T11:45:49.083] [DEBUG] debug-file - Executing task :entry:default@ProcessStartupConfig
+[2025-12-23T11:45:49.084] [DEBUG] debug-file - Task 'entry:default@ProcessStartupConfig' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:49.085] [DEBUG] debug-file - entry : default@ProcessStartupConfig cost memory 0.05965423583984375
+[2025-12-23T11:45:49.085] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 252 ms 
+[2025-12-23T11:45:49.086] [INFO] debug-file - Finished :entry:default@ProcessStartupConfig... after 2 ms 
+[2025-12-23T11:45:49.088] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@PreviewProcessResource
+[2025-12-23T11:45:49.090] [DEBUG] debug-file - Executing task :entry:default@PreviewProcessResource
+[2025-12-23T11:45:49.091] [DEBUG] debug-file - Task 'entry:default@PreviewProcessResource' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:49.091] [DEBUG] debug-file - entry : default@PreviewProcessResource cost memory 0.05489349365234375
+[2025-12-23T11:45:49.092] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 259 ms 
+[2025-12-23T11:45:49.093] [INFO] debug-file - Finished :entry:default@PreviewProcessResource... after 3 ms 
+[2025-12-23T11:45:49.097] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2025-12-23T11:45:49.101] [DEBUG] debug-file - Task 'entry:default@GenerateLoaderJson' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:45:49.116] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.529388427734375
+[2025-12-23T11:45:49.117] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 283 ms 
+[2025-12-23T11:45:49.122] [INFO] debug-file - Finished :entry:default@GenerateLoaderJson... after 21 ms 
+[2025-12-23T11:45:49.124] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@PreviewCompileResource
+[2025-12-23T11:45:49.125] [DEBUG] debug-file - Executing task :entry:default@PreviewCompileResource
+[2025-12-23T11:45:49.137] [DEBUG] debug-file - Use tool [D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\restool.exe]
+ [
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\restool.exe',
+  '-x',
+  'D:\\Projects\\List_commodity\\AppScope\\resources',
+  '-o',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\intermediates\\res\\default\\app_compiled'
+]
+[2025-12-23T11:45:49.140] [DEBUG] debug-file - current process  memoryUsage: {
+  rss: 220819456,
+  heapTotal: 169279488,
+  heapUsed: 135726328,
+  external: 3219019,
+  arrayBuffers: 100874
+} os memoryUsage :18.893939971923828
+[2025-12-23T11:45:49.510] [DEBUG] debug-file - Info: restool resources compile success.
+
+[2025-12-23T11:45:49.516] [DEBUG] debug-file - Use tool [D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\restool.exe]
+ [
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\restool.exe',
+  '-x',
+  'D:\\Projects\\List_commodity\\entry\\src\\main\\resources',
+  '-o',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\intermediates\\res\\default\\module_compiled'
+]
+[2025-12-23T11:45:49.517] [DEBUG] debug-file - current process  memoryUsage: {
+  rss: 221085696,
+  heapTotal: 169279488,
+  heapUsed: 135895744,
+  external: 3133243,
+  arrayBuffers: 101015
+} os memoryUsage :18.926239013671875
+[2025-12-23T11:45:49.763] [DEBUG] debug-file - Info: restool resources compile success.
+
+[2025-12-23T11:45:49.771] [DEBUG] debug-file - Use tool [D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\restool.exe]
+ [
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\restool.exe',
+  '-m',
+  'entry',
+  '-f',
+  '-j',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\intermediates\\process_profile\\default\\module.json',
+  '-p',
+  'c***y',
+  '-r',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\generated\\r\\default\\ResourceTable.h',
+  '-z',
+  '--ids',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\intermediates\\res\\default\\ids_map',
+  '-i',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\intermediates\\res\\default\\app_compiled',
+  '-i',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\intermediates\\res\\default\\module_compiled',
+  '-o',
+  'D:\\Projects\\List_commodity\\entry\\.preview\\default\\intermediates\\res\\default',
+  '--defined-sysids',
+  'D:\\Program\\DevEco Studio\\sdk\\default\\hms\\toolchains\\id_defined.json'
+]
+[2025-12-23T11:45:49.772] [DEBUG] debug-file - current process  memoryUsage: {
+  rss: 221110272,
+  heapTotal: 169279488,
+  heapUsed: 136081240,
+  external: 3133369,
+  arrayBuffers: 101952
+} os memoryUsage :18.968223571777344
+[2025-12-23T11:45:50.134] [DEBUG] debug-file - Info: hardware concurrency count is : 16
+Info: thread count is : 16
+
+[2025-12-23T11:45:50.134] [DEBUG] debug-file - Info: thread pool is started
+
+[2025-12-23T11:45:50.140] [DEBUG] debug-file - Info: restool resources compile success.
+
+[2025-12-23T11:45:50.141] [DEBUG] debug-file - Info: thread pool is stopped
+
+[2025-12-23T11:45:50.154] [DEBUG] debug-file - entry : default@PreviewCompileResource cost memory -7.8684234619140625
+[2025-12-23T11:45:50.154] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 321 ms 
+[2025-12-23T11:45:50.155] [INFO] debug-file - Finished :entry:default@PreviewCompileResource... after 1 s 30 ms 
+[2025-12-23T11:45:50.156] [DEBUG] debug-file - Executing task :entry:default@PreviewHookCompileResource
+[2025-12-23T11:45:50.157] [DEBUG] debug-file - entry : default@PreviewHookCompileResource cost memory 0.01811981201171875
+[2025-12-23T11:45:50.157] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 324 ms 
+[2025-12-23T11:45:50.158] [INFO] debug-file - Finished :entry:default@PreviewHookCompileResource... after 1 ms 
+[2025-12-23T11:45:50.160] [DEBUG] debug-file - Executing task :entry:default@CopyPreviewProfile
+[2025-12-23T11:45:50.170] [DEBUG] debug-file - entry : default@CopyPreviewProfile cost memory 0.47716522216796875
+[2025-12-23T11:45:50.170] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 336 ms 
+[2025-12-23T11:45:50.170] [INFO] debug-file - Finished :entry:default@CopyPreviewProfile... after 10 ms 
+[2025-12-23T11:45:50.172] [DEBUG] debug-file - Executing task :entry:default@ReplacePreviewerPage
+[2025-12-23T11:45:50.172] [DEBUG] debug-file - entry : default@ReplacePreviewerPage cost memory 0.0179595947265625
+[2025-12-23T11:45:50.173] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 339 ms 
+[2025-12-23T11:45:50.173] [INFO] debug-file - Finished :entry:default@ReplacePreviewerPage... after 1 ms 
+[2025-12-23T11:45:50.173] [DEBUG] debug-file - Executing task :entry:buildPreviewerResource
+[2025-12-23T11:45:50.174] [DEBUG] debug-file - entry : buildPreviewerResource cost memory 0.0145263671875
+[2025-12-23T11:45:50.174] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 341 ms 
+[2025-12-23T11:45:50.174] [INFO] debug-file - Finished :entry:buildPreviewerResource... after 1 ms 
+[2025-12-23T11:45:50.176] [DEBUG] debug-file - Executing task :entry:default@PreviewUpdateAssets
+[2025-12-23T11:45:50.189] [DEBUG] debug-file - entry : default@PreviewUpdateAssets cost memory 0.06859588623046875
+[2025-12-23T11:45:50.190] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 356 ms 
+[2025-12-23T11:45:50.191] [INFO] debug-file - Finished :entry:default@PreviewUpdateAssets... after 14 ms 
+[2025-12-23T11:45:50.194] [DEBUG] debug-file - Executing task :entry:default@PreviewArkTS
+[2025-12-23T11:45:50.194] [DEBUG] debug-file - obfuscationOptions: undefined
+[2025-12-23T11:45:50.218] [DEBUG] debug-file - session manager: binding session. socketId=rnkSaRqsQFa0B51TAAAD, threadId=1@1.
+[2025-12-23T11:45:50.220] [DEBUG] debug-file - entry : default@PreviewArkTS cost memory 1.5387115478515625
+[2025-12-23T11:46:06.179] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-23T11:46:06.179] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-23T11:46:06.203] [ERROR] debug-file - BUILD FAILED in 18 s 369 ms 
+[2025-12-23T11:46:06.204] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\AppScope\app.json5 cache by regenerate.
+[2025-12-23T11:46:06.205] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:46:06.205] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\build-profile.json5 cache by regenerate.
+[2025-12-23T11:46:06.205] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\entry\build-profile.json5 cache by regenerate.
+[2025-12-23T11:46:06.206] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\entry\src\main\resources\base\profile\main_pages.json cache by regenerate.
+[2025-12-23T11:46:06.206] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\hvigor\hvigor-config.json5 cache by regenerate.
+[2025-12-23T11:46:06.206] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\entry\oh-package.json5 cache by regenerate.
+[2025-12-23T11:46:06.207] [DEBUG] debug-file - Update task entry:default@PreBuild input file:D:\Projects\List_commodity\oh-package.json5 cache by regenerate.
+[2025-12-23T11:46:06.208] [DEBUG] debug-file - Incremental task entry:default@PreBuild post-execution cost:5 ms .
+[2025-12-23T11:46:06.208] [DEBUG] debug-file - Update task entry:default@CreateModuleInfo output file:D:\Projects\List_commodity\entry\.preview\default\generated\profile\default\ModuleInfo.ts cache.
+[2025-12-23T11:46:06.209] [DEBUG] debug-file - Incremental task entry:default@CreateModuleInfo post-execution cost:2 ms .
+[2025-12-23T11:46:06.209] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:D:\Projects\List_commodity\AppScope\app.json5 cache by regenerate.
+[2025-12-23T11:46:06.210] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:D:\Projects\List_commodity\build-profile.json5 cache by regenerate.
+[2025-12-23T11:46:06.210] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:46:06.211] [DEBUG] debug-file - Update task entry:default@MergeProfile output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\merge_profile\default\module.json cache.
+[2025-12-23T11:46:06.212] [DEBUG] debug-file - Incremental task entry:default@MergeProfile post-execution cost:3 ms .
+[2025-12-23T11:46:06.212] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile input file:D:\Projects\List_commodity\AppScope\app.json5 cache by regenerate.
+[2025-12-23T11:46:06.212] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile input file:D:\Projects\List_commodity\build-profile.json5 cache by regenerate.
+[2025-12-23T11:46:06.213] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile output file:D:\Projects\List_commodity\entry\.preview\default\generated\profile\default\BuildProfile.ets cache.
+[2025-12-23T11:46:06.214] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile post-execution cost:2 ms .
+[2025-12-23T11:46:06.214] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2025-12-23T11:46:06.214] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2025-12-23T11:46:06.215] [DEBUG] debug-file - Update task entry:default@ProcessProfile input file:D:\Projects\List_commodity\entry\.preview\default\intermediates\merge_profile\default\module.json cache by regenerate.
+[2025-12-23T11:46:06.215] [DEBUG] debug-file - Update task entry:default@ProcessProfile output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\process_profile\default\module.json cache.
+[2025-12-23T11:46:06.216] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile post-execution cost:2 ms .
+[2025-12-23T11:46:06.216] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:D:\Projects\List_commodity\entry\oh-package.json5 cache by regenerate.
+[2025-12-23T11:46:06.217] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:D:\Projects\List_commodity\oh-package.json5 cache by regenerate.
+[2025-12-23T11:46:06.217] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:46:06.218] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\router_map\default\temp-router-map.json cache.
+[2025-12-23T11:46:06.218] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\router_map\default\loader-router-map.json cache.
+[2025-12-23T11:46:06.218] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap post-execution cost:3 ms .
+[2025-12-23T11:46:06.219] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig input file:D:\Projects\List_commodity\entry\oh-package.json5 cache by regenerate.
+[2025-12-23T11:46:06.219] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig input file:D:\Projects\List_commodity\oh-package.json5 cache by regenerate.
+[2025-12-23T11:46:06.219] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:46:06.220] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\share_config\default\temp-share-config.json cache.
+[2025-12-23T11:46:06.220] [DEBUG] debug-file - Incremental task entry:default@ProcessShareConfig post-execution cost:2 ms .
+[2025-12-23T11:46:06.220] [DEBUG] debug-file - Update task entry:default@ProcessStartupConfig output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\startup\default\startup_config.json cache.
+[2025-12-23T11:46:06.221] [DEBUG] debug-file - Incremental task entry:default@ProcessStartupConfig post-execution cost:1 ms .
+[2025-12-23T11:46:06.222] [DEBUG] debug-file - Update task entry:default@GenerateLoaderJson input file:D:\Projects\List_commodity\entry\.preview\default\intermediates\router_map\default\temp-router-map.json cache by regenerate.
+[2025-12-23T11:46:06.222] [DEBUG] debug-file - Update task entry:default@GenerateLoaderJson output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\loader\default\loader.json cache.
+[2025-12-23T11:46:06.223] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson post-execution cost:2 ms .
+[2025-12-23T11:46:06.223] [DEBUG] debug-file - Update task entry:default@PreviewCompileResource input file:D:\Projects\List_commodity\entry\src\main\resources cache by regenerate.
+[2025-12-23T11:46:06.245] [DEBUG] debug-file - Update task entry:default@PreviewCompileResource input file:D:\Projects\List_commodity\entry\.preview\default\intermediates\merge_profile\default\module.json cache by regenerate.
+[2025-12-23T11:46:06.246] [DEBUG] debug-file - Update task entry:default@PreviewCompileResource output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\res\default cache.
+[2025-12-23T11:46:06.250] [DEBUG] debug-file - Update task entry:default@PreviewCompileResource output file:D:\Projects\List_commodity\entry\.preview\default\generated\r\default cache.
+[2025-12-23T11:46:06.251] [DEBUG] debug-file - Incremental task entry:default@PreviewCompileResource post-execution cost:28 ms .
+[2025-12-23T11:46:06.251] [DEBUG] debug-file - Update task entry:default@CopyPreviewProfile input file:D:\Projects\List_commodity\entry\src\main\resources\base\profile cache by regenerate.
+[2025-12-23T11:46:06.252] [DEBUG] debug-file - Update task entry:default@CopyPreviewProfile output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\res\default\resources\base\profile cache.
+[2025-12-23T11:46:06.253] [DEBUG] debug-file - Incremental task entry:default@CopyPreviewProfile post-execution cost:2 ms .
+[2025-12-23T11:46:06.253] [DEBUG] debug-file - Update task entry:default@PreviewUpdateAssets output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\res\default\module.json cache.
+[2025-12-23T11:46:06.254] [DEBUG] debug-file - Update task entry:default@PreviewUpdateAssets output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\res\default\resources\base\profile\main_pages.json cache.
+[2025-12-23T11:46:06.254] [DEBUG] debug-file - Incremental task entry:default@PreviewUpdateAssets post-execution cost:2 ms .
+[2025-12-23T11:46:06.255] [DEBUG] debug-file - Update task entry:default@PreviewArkTS input file:D:\Projects\List_commodity\entry\.preview\default\intermediates\loader\default cache by regenerate.
+[2025-12-23T11:46:06.256] [DEBUG] debug-file - Update task entry:default@PreviewArkTS input file:D:\Projects\List_commodity\entry\.preview\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2025-12-23T11:46:06.256] [DEBUG] debug-file - Update task entry:default@PreviewArkTS input file:D:\Projects\List_commodity\entry\.preview\default\intermediates\process_profile\default\module.json cache by regenerate.
+[2025-12-23T11:46:06.257] [DEBUG] debug-file - Update task entry:default@PreviewArkTS input file:D:\Projects\List_commodity\entry\.preview\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2025-12-23T11:46:06.257] [DEBUG] debug-file - Update task entry:default@PreviewArkTS input file:D:\Projects\List_commodity\entry\src\main\ets cache by regenerate.
+[2025-12-23T11:46:06.261] [DEBUG] debug-file - Update task entry:default@PreviewArkTS input file:D:\Projects\List_commodity\entry\.preview\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2025-12-23T11:46:06.261] [DEBUG] debug-file - Update task entry:default@PreviewArkTS output file:D:\Projects\List_commodity\entry\.preview\default\intermediates\loader_out\default\ets cache.
+[2025-12-23T11:46:06.262] [DEBUG] debug-file - Incremental task entry:default@PreviewArkTS post-execution cost:8 ms .
+[2025-12-23T11:46:06.297] [DEBUG] debug-file - There's no busy workers and idle workers need cleanup.
+[2025-12-23T11:46:06.298] [DEBUG] debug-file - hvigor build process will be closed.
+[2025-12-23T11:46:19.966] [DEBUG] debug-file - watch worker: send response to session manager. Response type: WatchStart
+[2025-12-23T11:46:19.969] [DEBUG] debug-file - session manager: watch message received from worker 1. Type: WatchStart
+[2025-12-23T11:46:19.970] [DEBUG] debug-file - session manager: Invalid socket, socket is undefined or disconnected. Type: WatchStart
+[2025-12-23T11:46:30.083] [DEBUG] debug-file - watch worker: worker is ready to be terminated.
+[2025-12-23T11:46:30.083] [DEBUG] debug-file - Server currently has 0 watch-worker
+[2025-12-23T11:49:34.673] [DEBUG] debug-file - session manager: set active socket. socketId=ZQoNaMboPANxQd7qAAAF
+[2025-12-23T11:49:34.698] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:49:34.707] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined
+}
+[2025-12-23T11:49:34.714] [DEBUG] debug-file - Cache service initialization finished in 7 ms 
+[2025-12-23T11:49:34.716] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:49:34.730] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2025-12-23T11:49:34.731] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2025-12-23T11:49:34.737] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2025-12-23T11:49:34.738] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2025-12-23T11:49:34.738] [DEBUG] debug-file - Product 'default' build option initialized
+[2025-12-23T11:49:34.738] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2025-12-23T11:49:34.740] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2025-12-23T11:49:34.744] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2025-12-23T11:49:34.748] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2025-12-23T11:49:34.805] [DEBUG] debug-file - Sdk init in 60 ms 
+[2025-12-23T11:49:34.812] [DEBUG] debug-file - Project task initialization takes 6 ms 
+[2025-12-23T11:49:34.812] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\hvigorfile.ts
+[2025-12-23T11:49:34.813] [DEBUG] debug-file - hvigorfile, resolving D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:49:34.818] [DEBUG] debug-file - hvigorfile, require result:  {}
+[2025-12-23T11:49:34.818] [DEBUG] debug-file - hvigorfile, binding system plugins {}
+[2025-12-23T11:49:34.819] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- D:\Projects\List_commodity\hvigorfile.ts
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- D:\Program\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2025-12-23T11:49:34.828] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=release
+[2025-12-23T11:49:34.829] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:49:34.829] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:49:34.829] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:49:34.829] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:49:34.829] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:49:34.830] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:49:34.831] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:49:34.831] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2025-12-23T11:49:34.831] [DEBUG] debug-file - Target 'default' config initialized
+[2025-12-23T11:49:34.832] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2025-12-23T11:49:34.832] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2025-12-23T11:49:34.832] [DEBUG] debug-file - Obtain build option for module 'entry' target 'default'in this build.
+[2025-12-23T11:49:34.834] [DEBUG] debug-file - Module entry task initialization takes 2 ms 
+[2025-12-23T11:49:34.834] [DEBUG] debug-file - hvigorfile, resolve finished D:\Projects\List_commodity\entry\hvigorfile.ts
+[2025-12-23T11:49:34.861] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 27 ms 
+[2025-12-23T11:49:34.861] [DEBUG] debug-file - project has submodules:entry
+[2025-12-23T11:49:34.862] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2025-12-23T11:49:34.868] [DEBUG] debug-file - load to the disk finished
+[2025-12-23T11:49:34.869] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:49:34.870] [DEBUG] debug-file - Module List_commodity Collected Dependency: 
+[2025-12-23T11:49:34.870] [DEBUG] debug-file - Module List_commodity's total dependency: 0
+[2025-12-23T11:49:34.871] [DEBUG] debug-file - Start to initialize dependency information.
+[2025-12-23T11:49:34.874] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2025-12-23T11:49:34.874] [DEBUG] debug-file - Module entry's total dependency: 0
+[2025-12-23T11:49:34.877] [DEBUG] debug-file - Configuration phase cost:163 ms 
+[2025-12-23T11:49:34.879] [DEBUG] debug-file - Configuration task cost before running: 178 ms 
+[2025-12-23T11:49:34.885] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2025-12-23T11:49:34.886] [DEBUG] debug-file - Task 'entry:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:34.893] [DEBUG] debug-file - Incremental task entry:default@PreBuild pre-execution cost: 6 ms .
+[2025-12-23T11:49:34.894] [DEBUG] debug-file - entry : default@PreBuild cost memory 0.28839111328125
+[2025-12-23T11:49:34.896] [INFO] debug-file - UP-TO-DATE :entry:default@PreBuild...  
+[2025-12-23T11:49:34.897] [DEBUG] debug-file - Executing task :entry:default@CreateModuleInfo
+[2025-12-23T11:49:34.897] [DEBUG] debug-file - Task 'entry:default@CreateModuleInfo' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:34.897] [DEBUG] debug-file - entry : default@CreateModuleInfo cost memory 0.0420684814453125
+[2025-12-23T11:49:34.897] [DEBUG] debug-file - runTaskFromQueue task cost before running: 196 ms 
+[2025-12-23T11:49:34.898] [INFO] debug-file - Finished :entry:default@CreateModuleInfo... after 1 ms 
+[2025-12-23T11:49:34.900] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2025-12-23T11:49:34.901] [DEBUG] debug-file - Task 'entry:default@GenerateMetadata' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:34.906] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.064849853515625
+[2025-12-23T11:49:34.906] [DEBUG] debug-file - runTaskFromQueue task cost before running: 205 ms 
+[2025-12-23T11:49:34.907] [INFO] debug-file - Finished :entry:default@GenerateMetadata... after 7 ms 
+[2025-12-23T11:49:34.909] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2025-12-23T11:49:34.909] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.0162811279296875
+[2025-12-23T11:49:34.909] [DEBUG] debug-file - runTaskFromQueue task cost before running: 208 ms 
+[2025-12-23T11:49:34.909] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 1 ms 
+[2025-12-23T11:49:34.911] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2025-12-23T11:49:34.911] [DEBUG] debug-file - Task 'entry:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:34.913] [DEBUG] debug-file - entry:default@MergeProfile is not up-to-date, since the output file 'D:\Projects\List_commodity\entry\build\default\intermediates\merge_profile\default\module.json' does not exist.
+[2025-12-23T11:49:34.914] [DEBUG] debug-file - Incremental task entry:default@MergeProfile pre-execution cost: 2 ms .
+[2025-12-23T11:49:34.914] [DEBUG] debug-file - Change app api release type with 'Beta5'
+[2025-12-23T11:49:34.914] [DEBUG] debug-file - Change app compile API version with '6.0.0.47'
+[2025-12-23T11:49:34.914] [DEBUG] debug-file - Change app target API version with '60000020'
+[2025-12-23T11:49:34.914] [DEBUG] debug-file - Change app minimum API version with '50005017'
+[2025-12-23T11:49:34.914] [DEBUG] debug-file - Use cli appEnvironment
+[2025-12-23T11:49:34.916] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.20383453369140625
+[2025-12-23T11:49:34.917] [DEBUG] debug-file - runTaskFromQueue task cost before running: 216 ms 
+[2025-12-23T11:49:34.918] [INFO] debug-file - Finished :entry:default@MergeProfile... after 6 ms 
+[2025-12-23T11:49:34.919] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2025-12-23T11:49:34.920] [DEBUG] debug-file - Task 'entry:default@CreateBuildProfile' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:34.921] [DEBUG] debug-file - entry:default@CreateBuildProfile is not up-to-date, since the output file 'D:\Projects\List_commodity\entry\build\default\generated\profile\default\BuildProfile.ets' does not exist.
+[2025-12-23T11:49:34.921] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile pre-execution cost: 1 ms .
+[2025-12-23T11:49:34.924] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.1064605712890625
+[2025-12-23T11:49:34.924] [DEBUG] debug-file - runTaskFromQueue task cost before running: 223 ms 
+[2025-12-23T11:49:34.924] [INFO] debug-file - Finished :entry:default@CreateBuildProfile... after 5 ms 
+[2025-12-23T11:49:34.926] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2025-12-23T11:49:34.926] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.01647186279296875
+[2025-12-23T11:49:34.926] [DEBUG] debug-file - runTaskFromQueue task cost before running: 225 ms 
+[2025-12-23T11:49:34.927] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2025-12-23T11:49:34.930] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2025-12-23T11:49:34.936] [DEBUG] debug-file - Task 'entry:default@GeneratePkgContextInfo' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:34.936] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.243194580078125
+[2025-12-23T11:49:34.937] [DEBUG] debug-file - runTaskFromQueue task cost before running: 236 ms 
+[2025-12-23T11:49:34.938] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 8 ms 
+[2025-12-23T11:49:34.942] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2025-12-23T11:49:34.943] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.0305328369140625
+[2025-12-23T11:49:34.943] [DEBUG] debug-file - runTaskFromQueue task cost before running: 242 ms 
+[2025-12-23T11:49:34.943] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 1 ms 
+[2025-12-23T11:49:34.945] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2025-12-23T11:49:34.945] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.01725006103515625
+[2025-12-23T11:49:34.945] [DEBUG] debug-file - runTaskFromQueue task cost before running: 244 ms 
+[2025-12-23T11:49:34.945] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 1 ms 
+[2025-12-23T11:49:34.947] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2025-12-23T11:49:34.950] [DEBUG] debug-file - Module Pack Info:  {
+  summary: {
+    app: { bundleName: 'c***y', bundleType: 'app', version: [Object] },
+    modules: [ [Object] ]
+  },
+  packages: [
+    {
+      deviceType: [Array],
+      moduleType: 'entry',
+      deliveryWithInstall: true,
+      name: 'entry-default'
+    }
+  ]
+}
+[2025-12-23T11:49:34.951] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.0965423583984375
+[2025-12-23T11:49:34.952] [DEBUG] debug-file - runTaskFromQueue task cost before running: 251 ms 
+[2025-12-23T11:49:34.952] [INFO] debug-file - Finished :entry:default@MakePackInfo... after 5 ms 
+[2025-12-23T11:49:34.954] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2025-12-23T11:49:34.955] [DEBUG] debug-file - File: 'D:\Projects\List_commodity\entry\src\main\syscap.json' from 'sysCapJsonPath' is not exists, just ignore.
+[2025-12-23T11:49:34.956] [DEBUG] debug-file - Task 'entry:default@SyscapTransform' cost while wrapping incremental declarations: 2 ms 
+[2025-12-23T11:49:34.957] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.06031036376953125
+[2025-12-23T11:49:34.957] [DEBUG] debug-file - runTaskFromQueue task cost before running: 256 ms 
+[2025-12-23T11:49:34.957] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 3 ms 
+[2025-12-23T11:49:34.959] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2025-12-23T11:49:34.960] [DEBUG] debug-file - Task 'entry:default@ProcessProfile' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:34.961] [DEBUG] debug-file - entry:default@ProcessProfile is not up-to-date, since the input file 'D:\Projects\List_commodity\entry\build\default\intermediates\merge_profile\default\module.json' has been changed.
+[2025-12-23T11:49:34.961] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile pre-execution cost: 1 ms .
+[2025-12-23T11:49:34.962] [DEBUG] debug-file - [
+  'D:\\Program\\DevEco Studio\\tools\\node\\node.exe',
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\bin\\ark\\ts2abc.js',
+  '--target-api-version',
+  '17'
+]
+[2025-12-23T11:49:35.095] [DEBUG] debug-file - 12.0.6.0
+[2025-12-23T11:49:35.097] [DEBUG] debug-file - No need to add fake ui ability because of not in preview process.
+[2025-12-23T11:49:35.098] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 0.34185791015625
+[2025-12-23T11:49:35.099] [DEBUG] debug-file - runTaskFromQueue task cost before running: 398 ms 
+[2025-12-23T11:49:35.099] [INFO] debug-file - Finished :entry:default@ProcessProfile... after 140 ms 
+[2025-12-23T11:49:35.101] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2025-12-23T11:49:35.103] [DEBUG] debug-file - entry:default@ProcessRouterMap is not up-to-date, since the output file 'D:\Projects\List_commodity\entry\build\default\intermediates\router_map\default\temp-router-map.json' does not exist.
+[2025-12-23T11:49:35.103] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap pre-execution cost: 2 ms .
+[2025-12-23T11:49:35.106] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.13735198974609375
+[2025-12-23T11:49:35.106] [DEBUG] debug-file - runTaskFromQueue task cost before running: 405 ms 
+[2025-12-23T11:49:35.107] [INFO] debug-file - Finished :entry:default@ProcessRouterMap... after 6 ms 
+[2025-12-23T11:49:35.109] [DEBUG] debug-file - Executing task :entry:default@ProcessShareConfig
+[2025-12-23T11:49:35.110] [DEBUG] debug-file - entry:default@ProcessShareConfig is not up-to-date, since the output file 'D:\Projects\List_commodity\entry\build\default\intermediates\share_config\default\temp-share-config.json' does not exist.
+[2025-12-23T11:49:35.111] [DEBUG] debug-file - Incremental task entry:default@ProcessShareConfig pre-execution cost: 2 ms .
+[2025-12-23T11:49:35.155] [DEBUG] debug-file - entry : default@ProcessShareConfig cost memory -1.5205230712890625
+[2025-12-23T11:49:35.156] [DEBUG] debug-file - runTaskFromQueue task cost before running: 455 ms 
+[2025-12-23T11:49:35.157] [INFO] debug-file - Finished :entry:default@ProcessShareConfig... after 47 ms 
+[2025-12-23T11:49:35.159] [DEBUG] debug-file - Executing task :entry:default@ProcessStartupConfig
+[2025-12-23T11:49:35.159] [DEBUG] debug-file - Task 'entry:default@ProcessStartupConfig' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:35.160] [DEBUG] debug-file - entry:default@ProcessStartupConfig is not up-to-date, since the output file 'D:\Projects\List_commodity\entry\build\default\intermediates\startup\default\startup_config.json' does not exist.
+[2025-12-23T11:49:35.160] [DEBUG] debug-file - Incremental task entry:default@ProcessStartupConfig pre-execution cost: 1 ms .
+[2025-12-23T11:49:35.160] [DEBUG] debug-file - entry : default@ProcessStartupConfig cost memory 0.09809112548828125
+[2025-12-23T11:49:35.161] [DEBUG] debug-file - runTaskFromQueue task cost before running: 460 ms 
+[2025-12-23T11:49:35.161] [INFO] debug-file - Finished :entry:default@ProcessStartupConfig... after 2 ms 
+[2025-12-23T11:49:35.163] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2025-12-23T11:49:35.165] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.0289154052734375
+[2025-12-23T11:49:35.165] [DEBUG] debug-file - runTaskFromQueue task cost before running: 464 ms 
+[2025-12-23T11:49:35.165] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 2 ms 
+[2025-12-23T11:49:35.167] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2025-12-23T11:49:35.184] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2025-12-23T11:49:35.184] [DEBUG] debug-file - Task 'entry:default@ProcessResource' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:35.187] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.1125335693359375
+[2025-12-23T11:49:35.188] [DEBUG] debug-file - runTaskFromQueue task cost before running: 487 ms 
+[2025-12-23T11:49:35.190] [INFO] debug-file - Finished :entry:default@ProcessResource... after 19 ms 
+[2025-12-23T11:49:35.193] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2025-12-23T11:49:35.193] [DEBUG] debug-file - Task 'entry:default@GenerateLoaderJson' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:35.201] [DEBUG] debug-file - entry:default@GenerateLoaderJson is not up-to-date, since the input file 'D:\Projects\List_commodity\entry\build\default\intermediates\router_map\default\temp-router-map.json' has been changed.
+[2025-12-23T11:49:35.201] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson pre-execution cost: 4 ms .
+[2025-12-23T11:49:35.204] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.5132522583007812
+[2025-12-23T11:49:35.204] [DEBUG] debug-file - runTaskFromQueue task cost before running: 503 ms 
+[2025-12-23T11:49:35.210] [INFO] debug-file - Finished :entry:default@GenerateLoaderJson... after 12 ms 
+[2025-12-23T11:49:35.213] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2025-12-23T11:49:35.223] [DEBUG] debug-file - Worker dispatch failed, running processLibs on main thread.
+[2025-12-23T11:49:35.226] [DEBUG] debug-file - entry : default@ProcessLibs cost memory -0.9856643676757812
+[2025-12-23T11:49:35.226] [DEBUG] debug-file - runTaskFromQueue task cost before running: 525 ms 
+[2025-12-23T11:49:35.227] [INFO] debug-file - Finished :entry:default@ProcessLibs... after 14 ms 
+[2025-12-23T11:49:35.229] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2025-12-23T11:49:35.230] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2025-12-23T11:49:35.236] [DEBUG] debug-file - Use tool [D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\restool.exe]
+ [
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\restool.exe',
+  '-l',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\resConfig.json'
+]
+[2025-12-23T11:49:35.237] [DEBUG] debug-file - current process  memoryUsage: {
+  rss: 175321088,
+  heapTotal: 123404288,
+  heapUsed: 113771264,
+  external: 3118283,
+  arrayBuffers: 90602
+} os memoryUsage :21.137828826904297
+[2025-12-23T11:49:35.491] [DEBUG] debug-file - Info: Pack: normal pack mode
+
+[2025-12-23T11:49:36.471] [DEBUG] debug-file - Info: hardware concurrency count is : 16
+Info: thread count is : 16
+
+[2025-12-23T11:49:36.471] [DEBUG] debug-file - Info: thread pool is started
+
+[2025-12-23T11:49:36.473] [DEBUG] debug-file - Info: GenericCompiler::CompileFiles
+
+[2025-12-23T11:49:36.479] [DEBUG] debug-file - Info: GenericCompiler::CompileFiles
+
+[2025-12-23T11:49:36.484] [DEBUG] debug-file - Info: GenericCompiler::CompileFiles
+
+[2025-12-23T11:49:36.501] [DEBUG] debug-file - 12-23 11:49:36.499 26504 26412 E C01400/ImageTranscoderUtils: DecodeToRGBA IN
+
+[2025-12-23T11:49:36.503] [DEBUG] debug-file - 12-23 11:49:36.501 26504 26412 E C01400/ImageTranscoderUtils: ImageFilter IN D:\Projects\List_commodity\AppScope\resources\base\media\app_icon.png
+
+[2025-12-23T11:49:36.545] [DEBUG] debug-file - 12-23 11:49:36.545 26504 26412 E C01400/ImageTranscoder: TranscodeSLR Only zoom-out is supported.
+
+[2025-12-23T11:49:36.546] [DEBUG] debug-file - Warning: ScaleImage failed, error message: INVALID_PARAMETERS, file path = D:\Projects\List_commodity\AppScope\resources\base\media\app_icon.png
+
+[2025-12-23T11:49:36.547] [DEBUG] debug-file - 12-23 11:49:36.548 26504 26412 E C01400/ImageTranscoderUtils: DecodeToRGBA IN
+
+[2025-12-23T11:49:36.548] [DEBUG] debug-file - 12-23 11:49:36.548 26504 26412 E C01400/ImageTranscoderUtils: ImageFilter IN D:\Projects\List_commodity\entry\src\main\resources\base\media\icon.png
+
+[2025-12-23T11:49:36.548] [DEBUG] debug-file - 12-23 11:49:36.548 26504 26412 E C01400/ImageTranscoder: TranscodeSLR Only zoom-out is supported.
+Warning: ScaleImage failed, error message: INVALID_PARAMETERS, file path = D:\Projects\List_commodity\entry\src\main\resources\base\media\icon.png
+
+[2025-12-23T11:49:36.549] [DEBUG] debug-file - Warning: The width or height of the png file referenced by the icon exceeds the limit (41 pixels)
+at D:\Projects\List_commodity\AppScope\resources\base\media\app_icon.png
+
+[2025-12-23T11:49:36.550] [DEBUG] debug-file - Warning: The width or height of the png file referenced by the icon exceeds the limit (41 pixels)
+at D:\Projects\List_commodity\entry\src\main\resources\base\media\icon.png
+
+[2025-12-23T11:49:36.551] [DEBUG] debug-file - Info: restool resources compile success.
+
+[2025-12-23T11:49:36.552] [DEBUG] debug-file - Info: thread pool is stopped
+
+[2025-12-23T11:49:36.619] [DEBUG] debug-file - entry : default@CompileResource cost memory 0.54736328125
+[2025-12-23T11:49:36.619] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 918 ms 
+[2025-12-23T11:49:36.621] [INFO] debug-file - Finished :entry:default@CompileResource... after 1 s 390 ms 
+[2025-12-23T11:49:36.623] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2025-12-23T11:49:36.624] [DEBUG] debug-file - Task 'entry:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:36.627] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.06113433837890625
+[2025-12-23T11:49:36.627] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 926 ms 
+[2025-12-23T11:49:36.628] [INFO] debug-file - Finished :entry:default@DoNativeStrip... after 5 ms 
+[2025-12-23T11:49:36.630] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2025-12-23T11:49:36.630] [DEBUG] debug-file - obfuscationOptions: undefined
+[2025-12-23T11:49:36.648] [DEBUG] debug-file - build config:
+[2025-12-23T11:49:36.649] [DEBUG] debug-file - {
+  moduleType: 'entry',
+  perf: 0,
+  targetName: '.default',
+  packageManagerType: 'ohpm',
+  localPropertiesPath: 'D:\\Projects\\List_commodity\\local.properties',
+  isPreview: false,
+  isOhosTest: false,
+  isLocalTest: false,
+  buildMode: 'Debug',
+  hotReloadBuild: undefined,
+  watchMode: 'false',
+  aceProfilePath: 'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\resources\\base\\profile',
+  etsLoaderPath: 'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader',
+  modulePath: 'D:\\Projects\\List_commodity\\entry',
+  testFrameworkPar: {
+    testMode: undefined,
+    coveragePathFilter: undefined,
+    coverageMode: undefined
+  },
+  needCoverageInsert: false,
+  debugLine: false,
+  projectTopDir: 'D:\\Projects\\List_commodity',
+  compileSdkVersion: 20,
+  compatibleSdkVersion: 17,
+  compatibleSdkVersionStage: undefined,
+  bundleName: 'c***y',
+  etsLoaderVersion: '6.0.0.47',
+  etsLoaderReleaseType: 'Beta5',
+  aotCompileMode: 'type',
+  apPath: 'D:\\Projects\\List_commodity\\entry\\modules.ap',
+  entryModuleName: 'entry',
+  entryModuleVersion: '1.0.0',
+  entryPackageName: 'entry',
+  allModuleNameHash: '46dc69cfbe882dbb4ab08d779a14723b',
+  externalApiPaths: [ 'D:\\Program\\DevEco Studio\\sdk\\default\\hms\\ets' ],
+  compilerTypes: [],
+  isCrossplatform: false,
+  hvigorPluginFile: undefined,
+  compilePluginPath: undefined,
+  buildGeneratedProfilePath: 'D:\\Projects\\List_commodity\\entry\\build\\default\\generated\\profile\\default',
+  bundleType: 'app',
+  arkTSVersion: undefined,
+  apiVersion: 20,
+  needCompleteSourcesMap: false,
+  isFaMode: false,
+  strictMode: undefined,
+  buildDir: 'D:\\Projects\\List_commodity\\entry\\build',
+  deviceTypes: [ 'phone' ],
+  useNormalizedOHMUrl: false,
+  pkgContextInfo: undefined,
+  ohPackagePathMap: {},
+  dependencyAliasMap: {},
+  permission: { requestPermissions: undefined, definePermissions: undefined },
+  integratedHsp: false,
+  projectArkOption: undefined,
+  sourceMapDir: undefined,
+  branchElimination: false,
+  transformLib: undefined,
+  caseSensitiveCheck: false,
+  tsImportSendable: false,
+  resolveConflictMode: true,
+  depName2RootPath: {},
+  depName2DepInfo: {},
+  rootPathSet: [ 'D:\\Projects\\List_commodity' ],
+  useNativeResolver: true,
+  shouldEmitJs: true,
+  useTscResolve: false,
+  singleFileEmit: false,
+  userProjectConfig: {
+    autoLazyImport: false,
+    allowEmptyBundleName: false,
+    reExportCheckMode: 'noCheck',
+    executionMode: 'memory',
+    usePathPlaceholder: false,
+    writeRollupCache: true,
+    isExpandImportEnabled: false,
+    expandImportExclude: '',
+    ignoreCrossplatformCheck: false,
+    isPreloadSoEnabled: false
+  },
+  skipOhModulesLint: false,
+  executionMode: 'memory',
+  autoLazyImport: false,
+  allowEmptyBundleName: false,
+  reExportCheckMode: 'noCheck',
+  usePathPlaceholder: false,
+  writeRollupCache: true,
+  isExpandImportEnabled: false,
+  expandImportExclude: '',
+  ignoreCrossplatformCheck: false,
+  isPreloadSoEnabled: false,
+  arkCompileCachePath: 'D:\\Projects\\List_commodity\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule',
+  aceModuleJsonPath: 'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\ark_module.json',
+  appResource: 'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\ResourceTable.txt',
+  rawFileResource: 'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\resources\\rawfile',
+  resourceTableHash: '8db4b06f5ea4a8afdfbd8407cb3ee65b',
+  runtimeOS: 'HarmonyOS',
+  sdkInfo: 'false:20:6.0.0.47:Beta5',
+  aceModuleRoot: 'D:\\Projects\\List_commodity\\entry\\src\\main\\ets',
+  compileMode: 'esmodule',
+  aceSuperVisualPath: 'D:\\Projects\\List_commodity\\entry\\src\\main\\supervisual',
+  aceBuildJson: 'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\loader\\default\\loader.json',
+  cachePath: 'D:\\Projects\\List_commodity\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule\\debug',
+  aceModuleBuild: 'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\loader_out\\default\\ets',
+  supportChunks: true,
+  declaredFilesPath: undefined,
+  shouldCollectDirectImportees: false,
+  isByteCodeHarOptimize: false,
+  expandImportPath: undefined,
+  pkgNameToPkgBriefInfo: {
+    entry: {
+      pkgRoot: 'D:\\Projects\\List_commodity\\entry',
+      originalSourceRoots: undefined,
+      sourceRoots: [Array],
+      pkgName: 'entry'
+    }
+  },
+  projectModel: {
+    'D:\\Projects\\List_commodity\\entry\\src\\main': {
+      moduleName: 'entry',
+      modulePkgPath: 'D:\\Projects\\List_commodity\\entry',
+      belongProjectPath: 'D:\\Projects\\List_commodity'
+    },
+    'D:\\Projects\\List_commodity\\entry': {
+      moduleName: 'entry',
+      modulePkgPath: 'D:\\Projects\\List_commodity\\entry',
+      belongProjectPath: 'D:\\Projects\\List_commodity'
+    },
+    'D:\\Projects\\List_commodity': {
+      moduleName: 'List_commodity',
+      modulePkgPath: 'D:\\Projects\\List_commodity',
+      belongProjectPath: 'D:\\Projects\\List_commodity'
+    }
+  },
+  pkgJsonFileHash: '0f5e3d8ecafe85d04d1623b8726fd89e',
+  allModulePaths: [ 'D:\\Projects\\List_commodity\\entry' ],
+  routerMap: {},
+  obfuscationOptions: undefined,
+  byteCodeHarToDependencyKeys: undefined,
+  compileBlockPkg: [],
+  mockParams: {
+    decorator: '@MockSetup',
+    packageName: '@ohos/hamock',
+    etsSourceRootPath: 'src/main/ets',
+    mockConfigPath: undefined,
+    mockConfigKey2ModuleInfo: {},
+    source2ModuleIdMap: {}
+  },
+  copyCodeResourceEnable: true,
+  copyCodeResourceExcludes: [],
+  copyCodeResourceIncludes: undefined,
+  uiTransformOptimization: false,
+  sdkPath: 'D:/Program/DevEco Studio/sdk',
+  needPreloadSoFileSet: {},
+  preloadSoFilePath: 'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\preload\\default\\preload.json',
+  useSourceHash: false,
+  localModuleParamMap: {},
+  otherPaths: {
+    'entry/*': [
+      '..\\*',
+      '..\\..\\..\\build\\default\\generated\\profile\\default\\*'
+    ]
+  },
+  collectImportersConfig: undefined
+}
+[2025-12-23T11:49:36.650] [DEBUG] debug-file - Compile arkts with external api path: D:\Program\DevEco Studio\sdk\default\hms\ets
+[2025-12-23T11:49:36.653] [DEBUG] debug-file - default@CompileArkTS work[0] is submitted.
+[2025-12-23T11:49:36.654] [DEBUG] debug-file - default@CompileArkTS work[0] is pushed to ready queue.
+[2025-12-23T11:49:36.654] [DEBUG] debug-file - A work dispatched to worker[15] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[14] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[13] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[12] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[11] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[10] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[9] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[8] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[7] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.655] [DEBUG] debug-file - A work dispatched to worker[6] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.656] [DEBUG] debug-file - A work dispatched to worker[5] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.657] [DEBUG] debug-file - Create  resident worker with id: 4.
+[2025-12-23T11:49:36.659] [DEBUG] debug-file - default@CompileArkTS work[0] has been dispatched to worker[4].
+[2025-12-23T11:49:36.660] [DEBUG] debug-file - default@CompileArkTS work[0] is dispatched.
+[2025-12-23T11:49:36.660] [DEBUG] debug-file - CopyResources startTime: 1146904178319400
+[2025-12-23T11:49:36.660] [DEBUG] debug-file - default@CompileArkTS work[1] is submitted.
+[2025-12-23T11:49:36.661] [DEBUG] debug-file - default@CompileArkTS work[1] is pushed to ready queue.
+[2025-12-23T11:49:36.661] [DEBUG] debug-file - A work dispatched to worker[15] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.661] [DEBUG] debug-file - Create  resident worker with id: 14.
+[2025-12-23T11:49:36.663] [DEBUG] debug-file - default@CompileArkTS work[1] has been dispatched to worker[14].
+[2025-12-23T11:49:36.663] [DEBUG] debug-file - default@CompileArkTS work[1] is dispatched.
+[2025-12-23T11:49:36.663] [DEBUG] debug-file - entry : default@CompileArkTS cost memory -0.5013351440429688
+[2025-12-23T11:49:36.666] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2025-12-23T11:49:36.671] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.11541748046875
+[2025-12-23T11:49:36.672] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 s 971 ms 
+[2025-12-23T11:49:36.673] [INFO] debug-file - Finished :entry:default@BuildJS... after 6 ms 
+[2025-12-23T11:49:36.675] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2025-12-23T11:49:36.676] [DEBUG] debug-file - Task 'entry:default@CacheNativeLibs' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:36.676] [DEBUG] debug-file - default@CacheNativeLibs work[2] is submitted.
+[2025-12-23T11:49:36.677] [DEBUG] debug-file - default@CacheNativeLibs work[2] is pushed to ready queue.
+[2025-12-23T11:49:36.677] [DEBUG] debug-file - A work dispatched to worker[15] failed because unable to get work from ready queue.
+[2025-12-23T11:49:36.677] [DEBUG] debug-file - A work dispatched to worker[14] failed because of worker busy.
+[2025-12-23T11:49:36.677] [DEBUG] debug-file - Create  resident worker with id: 13.
+[2025-12-23T11:49:36.678] [DEBUG] debug-file - default@CacheNativeLibs work[2] has been dispatched to worker[13].
+[2025-12-23T11:49:36.678] [DEBUG] debug-file - default@CacheNativeLibs work[2] is dispatched.
+[2025-12-23T11:49:36.678] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.1734771728515625
+[2025-12-23T11:49:38.509] [DEBUG] debug-file - worker[13] has one work done.
+[2025-12-23T11:49:38.510] [DEBUG] debug-file - default@CacheNativeLibs work[2] done.
+[2025-12-23T11:49:38.513] [INFO] debug-file - Finished :entry:default@CacheNativeLibs... after 16 ms 
+[2025-12-23T11:49:38.533] [DEBUG] debug-file - worker[14] has one work done.
+[2025-12-23T11:49:38.533] [DEBUG] debug-file - CopyResources is end, endTime: 1146906051590400
+[2025-12-23T11:49:38.533] [DEBUG] debug-file - default@CompileArkTS work[1] done.
+[2025-12-23T11:49:38.747] [DEBUG] debug-file - A work dispatched to worker[14] failed because unable to get work from ready queue.
+[2025-12-23T11:49:38.948] [DEBUG] debug-file - A work dispatched to worker[13] failed because unable to get work from ready queue.
+[2025-12-23T11:49:49.525] [DEBUG] debug-file - worker[4] has one work done.
+[2025-12-23T11:49:49.526] [DEBUG] debug-file - Ark compile task finished.finished time is 1146917043207800
+[2025-12-23T11:49:49.528] [DEBUG] debug-file - default@CompileArkTS work[0] done.
+[2025-12-23T11:49:49.528] [DEBUG] debug-file - A work dispatched to worker[4] failed because unable to get work from ready queue.
+[2025-12-23T11:49:49.530] [INFO] debug-file - Finished :entry:default@CompileArkTS... after 8 s 529 ms 
+[2025-12-23T11:49:49.531] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2025-12-23T11:49:49.532] [DEBUG] debug-file - File: 'D:\Projects\List_commodity\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2025-12-23T11:49:49.532] [DEBUG] debug-file - Task 'entry:default@GeneratePkgModuleJson' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:49.536] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.07190704345703125
+[2025-12-23T11:49:49.536] [DEBUG] debug-file - runTaskFromQueue task cost before running: 14 s 835 ms 
+[2025-12-23T11:49:49.537] [INFO] debug-file - Finished :entry:default@GeneratePkgModuleJson... after 6 ms 
+[2025-12-23T11:49:49.538] [DEBUG] debug-file - Executing task :entry:default@ProcessCompiledResources
+[2025-12-23T11:49:49.539] [DEBUG] debug-file - File: 'D:\Projects\List_commodity\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2025-12-23T11:49:49.539] [DEBUG] debug-file - Task 'entry:default@ProcessCompiledResources' cost while wrapping incremental declarations: 1 ms 
+[2025-12-23T11:49:49.540] [DEBUG] debug-file - entry : default@ProcessCompiledResources cost memory 0.06275177001953125
+[2025-12-23T11:49:49.541] [DEBUG] debug-file - runTaskFromQueue task cost before running: 14 s 839 ms 
+[2025-12-23T11:49:49.542] [INFO] debug-file - Finished :entry:default@ProcessCompiledResources... after 2 ms 
+[2025-12-23T11:49:49.546] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2025-12-23T11:49:49.551] [DEBUG] debug-file - Use tool [D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\lib\app_packing_tool.jar]
+ [
+  'java',
+  '-Dfile.encoding=GBK',
+  '-jar',
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\lib\\app_packing_tool.jar',
+  '--mode',
+  'hap',
+  '--force',
+  'true',
+  '--lib-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\stripped_native_libs\\default',
+  '--json-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\package\\default\\module.json',
+  '--resources-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\resources',
+  '--index-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\resources.index',
+  '--pack-info-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\outputs\\default\\pack.info',
+  '--out-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\outputs\\default\\entry-default-unsigned.hap',
+  '--ets-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\loader_out\\default\\ets'
+]
+[2025-12-23T11:49:50.437] [DEBUG] debug-file - java daemon socket received message:{"code":0,"message":"pack success"}
+[2025-12-23T11:49:50.443] [DEBUG] debug-file - entry : default@PackageHap cost memory 0.44548797607421875
+[2025-12-23T11:49:50.444] [DEBUG] debug-file - runTaskFromQueue task cost before running: 15 s 742 ms 
+[2025-12-23T11:49:50.447] [INFO] debug-file - Finished :entry:default@PackageHap... after 898 ms 
+[2025-12-23T11:49:50.450] [DEBUG] debug-file - Executing task :entry:default@PackingCheck
+[2025-12-23T11:49:50.463] [DEBUG] debug-file - entry : default@PackingCheck cost memory -0.164398193359375
+[2025-12-23T11:49:50.463] [DEBUG] debug-file - runTaskFromQueue task cost before running: 15 s 762 ms 
+[2025-12-23T11:49:50.463] [INFO] debug-file - Finished :entry:default@PackingCheck... after 14 ms 
+[2025-12-23T11:49:50.466] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2025-12-23T11:49:50.466] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in D:\Projects\List_commodity\build-profile.json5.
+[2025-12-23T11:49:50.468] [DEBUG] debug-file - entry : default@SignHap cost memory 0.06153106689453125
+[2025-12-23T11:49:50.468] [DEBUG] debug-file - runTaskFromQueue task cost before running: 15 s 767 ms 
+[2025-12-23T11:49:50.469] [INFO] debug-file - Finished :entry:default@SignHap... after 3 ms 
+[2025-12-23T11:49:50.471] [DEBUG] debug-file - Executing task :entry:default@CollectDebugSymbol
+[2025-12-23T11:49:50.472] [DEBUG] debug-file - entry : default@CollectDebugSymbol cost memory 0.08612823486328125
+[2025-12-23T11:49:50.472] [DEBUG] debug-file - runTaskFromQueue task cost before running: 15 s 771 ms 
+[2025-12-23T11:49:50.473] [INFO] debug-file - Finished :entry:default@CollectDebugSymbol... after 2 ms 
+[2025-12-23T11:49:50.473] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2025-12-23T11:49:50.474] [DEBUG] debug-file - entry : assembleHap cost memory 0.01428985595703125
+[2025-12-23T11:49:50.474] [DEBUG] debug-file - runTaskFromQueue task cost before running: 15 s 773 ms 
+[2025-12-23T11:49:50.475] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2025-12-23T11:49:50.496] [INFO] debug-file - BUILD SUCCESSFUL in 15 s 795 ms 
+[2025-12-23T11:49:50.497] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2025-12-23T11:49:50.497] [DEBUG] debug-file - Update task entry:default@CreateModuleInfo output file:D:\Projects\List_commodity\entry\build\default\generated\profile\default\ModuleInfo.ts cache.
+[2025-12-23T11:49:50.498] [DEBUG] debug-file - Incremental task entry:default@CreateModuleInfo post-execution cost:1 ms .
+[2025-12-23T11:49:50.498] [DEBUG] debug-file - Update task entry:default@GenerateMetadata input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:49:50.498] [DEBUG] debug-file - Update task entry:default@GenerateMetadata output file:D:\Projects\List_commodity\entry\build\default\intermediates\hap_metadata\default\output_metadata.json cache.
+[2025-12-23T11:49:50.499] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata post-execution cost:1 ms .
+[2025-12-23T11:49:50.499] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:D:\Projects\List_commodity\AppScope\app.json5 cache by regenerate.
+[2025-12-23T11:49:50.499] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:D:\Projects\List_commodity\build-profile.json5 cache by regenerate.
+[2025-12-23T11:49:50.499] [DEBUG] debug-file - Update task entry:default@MergeProfile input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:49:50.500] [DEBUG] debug-file - Update task entry:default@MergeProfile output file:D:\Projects\List_commodity\entry\build\default\intermediates\merge_profile\default\module.json cache.
+[2025-12-23T11:49:50.500] [DEBUG] debug-file - Incremental task entry:default@MergeProfile post-execution cost:2 ms .
+[2025-12-23T11:49:50.500] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile input file:D:\Projects\List_commodity\AppScope\app.json5 cache by regenerate.
+[2025-12-23T11:49:50.500] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile input file:D:\Projects\List_commodity\build-profile.json5 cache by regenerate.
+[2025-12-23T11:49:50.501] [DEBUG] debug-file - Update task entry:default@CreateBuildProfile output file:D:\Projects\List_commodity\entry\build\default\generated\profile\default\BuildProfile.ets cache.
+[2025-12-23T11:49:50.501] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile post-execution cost:1 ms .
+[2025-12-23T11:49:50.501] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:D:\Projects\List_commodity\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2025-12-23T11:49:50.501] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2025-12-23T11:49:50.501] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:D:\Projects\List_commodity\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2025-12-23T11:49:50.502] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2025-12-23T11:49:50.502] [DEBUG] debug-file - Update task entry:default@MakePackInfo input file:D:\Projects\List_commodity\AppScope\app.json5 cache by regenerate.
+[2025-12-23T11:49:50.502] [DEBUG] debug-file - Update task entry:default@MakePackInfo input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:49:50.503] [DEBUG] debug-file - Update task entry:default@MakePackInfo input file:D:\Projects\List_commodity\build-profile.json5 cache by regenerate.
+[2025-12-23T11:49:50.503] [DEBUG] debug-file - Update task entry:default@MakePackInfo output file:D:\Projects\List_commodity\entry\build\default\outputs\default\pack.info cache.
+[2025-12-23T11:49:50.503] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo post-execution cost:2 ms .
+[2025-12-23T11:49:50.504] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2025-12-23T11:49:50.504] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program\DevEco Studio\sdk\default\openharmony\ets\api\device-define cache by regenerate.
+[2025-12-23T11:49:50.506] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:D:\Projects\List_commodity\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2025-12-23T11:49:50.507] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:4 ms .
+[2025-12-23T11:49:50.507] [DEBUG] debug-file - Update task entry:default@ProcessProfile input file:D:\Projects\List_commodity\entry\build\default\intermediates\merge_profile\default\module.json cache from map.
+[2025-12-23T11:49:50.507] [DEBUG] debug-file - Update task entry:default@ProcessProfile output file:D:\Projects\List_commodity\entry\build\default\intermediates\process_profile\default\module.json cache.
+[2025-12-23T11:49:50.508] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile post-execution cost:1 ms .
+[2025-12-23T11:49:50.508] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:D:\Projects\List_commodity\entry\oh-package.json5 cache by regenerate.
+[2025-12-23T11:49:50.508] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:D:\Projects\List_commodity\oh-package.json5 cache by regenerate.
+[2025-12-23T11:49:50.509] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:49:50.509] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap output file:D:\Projects\List_commodity\entry\build\default\intermediates\router_map\default\temp-router-map.json cache.
+[2025-12-23T11:49:50.509] [DEBUG] debug-file - Update task entry:default@ProcessRouterMap output file:D:\Projects\List_commodity\entry\build\default\intermediates\router_map\default\loader-router-map.json cache.
+[2025-12-23T11:49:50.510] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap post-execution cost:2 ms .
+[2025-12-23T11:49:50.510] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig input file:D:\Projects\List_commodity\entry\oh-package.json5 cache by regenerate.
+[2025-12-23T11:49:50.510] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig input file:D:\Projects\List_commodity\oh-package.json5 cache by regenerate.
+[2025-12-23T11:49:50.511] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig input file:D:\Projects\List_commodity\entry\src\main\module.json5 cache by regenerate.
+[2025-12-23T11:49:50.511] [DEBUG] debug-file - Update task entry:default@ProcessShareConfig output file:D:\Projects\List_commodity\entry\build\default\intermediates\share_config\default\temp-share-config.json cache.
+[2025-12-23T11:49:50.512] [DEBUG] debug-file - Incremental task entry:default@ProcessShareConfig post-execution cost:3 ms .
+[2025-12-23T11:49:50.513] [DEBUG] debug-file - Update task entry:default@ProcessStartupConfig output file:D:\Projects\List_commodity\entry\build\default\intermediates\startup\default\startup_config.json cache.
+[2025-12-23T11:49:50.513] [DEBUG] debug-file - Incremental task entry:default@ProcessStartupConfig post-execution cost:1 ms .
+[2025-12-23T11:49:50.513] [DEBUG] debug-file - Update task entry:default@ProcessResource output file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resConfig.json cache.
+[2025-12-23T11:49:50.514] [DEBUG] debug-file - Update task entry:default@ProcessResource output file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\opt-compression.json cache.
+[2025-12-23T11:49:50.514] [DEBUG] debug-file - Incremental task entry:default@ProcessResource post-execution cost:1 ms .
+[2025-12-23T11:49:50.515] [DEBUG] debug-file - Update task entry:default@GenerateLoaderJson input file:D:\Projects\List_commodity\entry\build\default\intermediates\router_map\default\temp-router-map.json cache from map.
+[2025-12-23T11:49:50.515] [DEBUG] debug-file - Update task entry:default@GenerateLoaderJson output file:D:\Projects\List_commodity\entry\build\default\intermediates\loader\default\loader.json cache.
+[2025-12-23T11:49:50.515] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson post-execution cost:2 ms .
+[2025-12-23T11:49:50.516] [DEBUG] debug-file - Update task entry:default@ProcessLibs input file:D:\Projects\List_commodity\build-profile.json5 cache by regenerate.
+[2025-12-23T11:49:50.516] [DEBUG] debug-file - Update task entry:default@ProcessLibs input file:D:\Projects\List_commodity\entry\build-profile.json5 cache by regenerate.
+[2025-12-23T11:49:50.517] [DEBUG] debug-file - Update task entry:default@ProcessLibs output file:D:\Projects\List_commodity\entry\build\default\intermediates\libs\default cache.
+[2025-12-23T11:49:50.517] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs post-execution cost:2 ms .
+[2025-12-23T11:49:50.518] [DEBUG] debug-file - Update task entry:default@CompileResource input file:D:\Projects\List_commodity\entry\src\main\resources cache by regenerate.
+[2025-12-23T11:49:50.522] [DEBUG] debug-file - Update task entry:default@CompileResource input file:D:\Projects\List_commodity\AppScope\resources cache by regenerate.
+[2025-12-23T11:49:50.524] [DEBUG] debug-file - Update task entry:default@CompileResource input file:D:\Projects\List_commodity\entry\build\default\intermediates\process_profile\default\module.json cache by regenerate.
+[2025-12-23T11:49:50.525] [DEBUG] debug-file - Update task entry:default@CompileResource input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resConfig.json cache by regenerate.
+[2025-12-23T11:49:50.525] [DEBUG] debug-file - Update task entry:default@CompileResource output file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default cache.
+[2025-12-23T11:49:50.531] [DEBUG] debug-file - Update task entry:default@CompileResource output file:D:\Projects\List_commodity\entry\build\default\generated\r\default\ResourceTable.h cache.
+[2025-12-23T11:49:50.531] [DEBUG] debug-file - Update task entry:default@CompileResource output file:D:\Projects\List_commodity\entry\build\default\generated\r\default cache.
+[2025-12-23T11:49:50.532] [DEBUG] debug-file - Incremental task entry:default@CompileResource post-execution cost:15 ms .
+[2025-12-23T11:49:50.532] [DEBUG] debug-file - Update task entry:default@DoNativeStrip input file:D:\Projects\List_commodity\entry\build\default\intermediates\libs\default cache by regenerate.
+[2025-12-23T11:49:50.533] [DEBUG] debug-file - Update task entry:default@DoNativeStrip output file:D:\Projects\List_commodity\entry\build\default\intermediates\stripped_native_libs\default cache.
+[2025-12-23T11:49:50.534] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip post-execution cost:2 ms .
+[2025-12-23T11:49:50.536] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader\default cache by regenerate.
+[2025-12-23T11:49:50.536] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2025-12-23T11:49:50.537] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2025-12-23T11:49:50.537] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2025-12-23T11:49:50.538] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\src\main\ets cache by regenerate.
+[2025-12-23T11:49:50.543] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2025-12-23T11:49:50.543] [DEBUG] debug-file - Update task entry:default@CompileArkTS output file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets cache.
+[2025-12-23T11:49:50.544] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS post-execution cost:10 ms .
+[2025-12-23T11:49:50.545] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader\default cache by regenerate.
+[2025-12-23T11:49:50.546] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2025-12-23T11:49:50.546] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2025-12-23T11:49:50.547] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2025-12-23T11:49:50.547] [DEBUG] debug-file - Update task entry:default@BuildJS output file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\js cache.
+[2025-12-23T11:49:50.548] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:4 ms .
+[2025-12-23T11:49:50.548] [DEBUG] debug-file - Update task entry:default@CacheNativeLibs input file:D:\Projects\List_commodity\entry\build\default\intermediates\stripped_native_libs\default cache by regenerate.
+[2025-12-23T11:49:50.548] [DEBUG] debug-file - Update task entry:default@CacheNativeLibs input file:D:\Projects\List_commodity\entry\build\default\intermediates\libs\default cache by regenerate.
+[2025-12-23T11:49:50.549] [DEBUG] debug-file - Update task entry:default@CacheNativeLibs output file:D:\Projects\List_commodity\entry\build\default\intermediates\patch\default\base_native_libs.json cache.
+[2025-12-23T11:49:50.549] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs post-execution cost:2 ms .
+[2025-12-23T11:49:50.549] [DEBUG] debug-file - Update task entry:default@GeneratePkgModuleJson input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2025-12-23T11:49:50.550] [DEBUG] debug-file - Update task entry:default@GeneratePkgModuleJson output file:D:\Projects\List_commodity\entry\build\default\intermediates\package\default\module.json cache.
+[2025-12-23T11:49:50.550] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson post-execution cost:1 ms .
+[2025-12-23T11:49:50.550] [DEBUG] debug-file - Incremental task entry:default@ProcessCompiledResources post-execution cost:1 ms .
+[2025-12-23T11:49:50.551] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\stripped_native_libs\default cache by regenerate.
+[2025-12-23T11:49:50.551] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2025-12-23T11:49:50.552] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources cache by regenerate.
+[2025-12-23T11:49:50.554] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources.index cache by regenerate.
+[2025-12-23T11:49:50.555] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\outputs\default\pack.info cache by regenerate.
+[2025-12-23T11:49:50.556] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets cache by regenerate.
+[2025-12-23T11:49:50.557] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2025-12-23T11:49:50.557] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2025-12-23T11:49:50.558] [DEBUG] debug-file - Update task entry:default@PackageHap output file:D:\Projects\List_commodity\entry\build\default\outputs\default\entry-default-unsigned.hap cache.
+[2025-12-23T11:49:50.559] [DEBUG] debug-file - Update task entry:default@PackageHap output file:D:\Projects\List_commodity\entry\build\default\intermediates\source_map\default\sourceMaps.map cache.
+[2025-12-23T11:49:50.559] [DEBUG] debug-file - Update task entry:default@PackageHap output file:D:\Projects\List_commodity\entry\build\default\outputs\default\mapping\sourceMaps.map cache.
+[2025-12-23T11:49:50.559] [DEBUG] debug-file - Incremental task entry:default@PackageHap post-execution cost:10 ms .
+[2025-12-23T11:49:50.560] [DEBUG] debug-file - Update task entry:default@SignHap input file:D:\Projects\List_commodity\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2025-12-23T11:49:50.560] [DEBUG] debug-file - Update task entry:default@SignHap output file:D:\Projects\List_commodity\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2025-12-23T11:49:50.561] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:2 ms .
+[2025-12-23T11:49:50.561] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2025-12-23T11:49:50.562] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol input file:D:\Projects\List_commodity\entry\build\default\intermediates\libs\default cache by regenerate.
+[2025-12-23T11:49:50.562] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol output file:D:\Projects\List_commodity\entry\build\default\outputs\default\symbol cache.
+[2025-12-23T11:49:50.563] [DEBUG] debug-file - Incremental task entry:default@CollectDebugSymbol post-execution cost:2 ms .
+[2025-12-23T11:49:50.604] [DEBUG] debug-file - Cleanup worker 13.
+[2025-12-23T11:49:50.604] [DEBUG] debug-file - Worker 13 has been cleaned up.
+[2025-12-23T11:49:50.604] [DEBUG] debug-file - Current idle worker size: 2.
+[2025-12-23T11:49:50.605] [DEBUG] debug-file - Current resident worker size: 3.
+[2025-12-23T11:49:50.605] [DEBUG] debug-file - Cleanup worker 14.
+[2025-12-23T11:49:50.605] [DEBUG] debug-file - Worker 14 has been cleaned up.
+[2025-12-23T11:49:50.605] [DEBUG] debug-file - Current idle worker size: 1.
+[2025-12-23T11:49:50.605] [DEBUG] debug-file - Current resident worker size: 3.
+[2025-12-23T11:49:50.606] [DEBUG] debug-file - hvigor build process will be closed.
+[2025-12-23T11:49:50.607] [DEBUG] debug-file - java daemon socket close code:1000 reason:close by user
+[2025-12-23T11:49:50.612] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-23T11:49:50.613] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-23T11:49:50.619] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:49:50.620] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-23T11:49:50.620] [DEBUG] debug-file - worker[13] exits with exit code 1.
+[2025-12-23T11:49:50.624] [DEBUG] debug-file - worker[14] exits with exit code 1.

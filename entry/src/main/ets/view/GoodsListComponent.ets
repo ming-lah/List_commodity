@@ -20,8 +20,6 @@ import { ListDataSource } from '../viewmodel/ListDataSource';
 @Component
 export default struct GoodsList {
   @Provide goodsListData: ListDataSource = new ListDataSource();
-  private startTouchOffsetY: number = 0;
-  private endTouchOffsetY: number = 0;
 
   build() {
     Row() {
@@ -66,24 +64,26 @@ export default struct GoodsList {
             .height(commonConst.GOODS_LIST_HEIGHT)
             .width(commonConst.LAYOUT_WIDTH_OR_HEIGHT)
           }
-          .onTouch((event?: TouchEvent) => {
-            if (event === undefined) {
-              return;
-            }
-            switch (event.type) {
-              case TouchType.Down:
-                this.startTouchOffsetY = event.touches[0].y;
-                break;
-              case TouchType.Up:
-                this.startTouchOffsetY = event.touches[0].y;
-                break;
-              case TouchType.Move:
-                if (this.startTouchOffsetY - this.endTouchOffsetY > 0) {
-                  this.goodsListData.pushData();
-                }
-                break;
-            }
-          })
+        })
+
+        // 触底加载更多：用一个 footer ListItem 做“哨兵”触发 pushData()
+        ListItem() {
+          if (this.goodsListData.totalCount() >= commonConst.MAX_DATA_LENGTH) {
+            Text($r('app.string.to_bottom'))
+              .fontSize(commonConst.NORMAL_FONT_SIZE)
+              .fontColor($r('app.color.gray'))
+              .width('100%')
+              .textAlign(TextAlign.Center)
+          } else {
+            Row() {}
+              .height(1)
+              .width('100%')
+          }
+        }
+        .onAppear(() => {
+          if (this.goodsListData.totalCount() < commonConst.MAX_DATA_LENGTH) {
+            this.goodsListData.pushData();
+          }
         })
       }
       .width(commonConst.GOODS_LIST_WIDTH)

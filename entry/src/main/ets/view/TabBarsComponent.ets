@@ -18,13 +18,11 @@ import {
   LAYOUT_WIDTH_OR_HEIGHT,
   NORMAL_FONT_SIZE,
   BIGGER_FONT_SIZE,
-  MAX_FONT_SIZE,
   MAX_OFFSET_Y,
   REFRESH_TIME,
   GOODS_EVALUATE_FONT_SIZE,
   MAX_LINES_TEXT
 } from '../common/CommonConstants';
-import GoodsList from './GoodsListComponent';
 import PutDownRefresh from './PutDownRefreshLayout';
 import WaterfallGoods from './WaterfallGoodsComponent';
 import CategoryGoodsWaterfall from './WaterfallGoodsCategory';
@@ -38,7 +36,8 @@ export default struct TabBar {
   private currentOffsetY: number = 0;
   private timer: number = 0;
   @State tabsIndex: number = 0;
-  @State refreshStatus: boolean = false;
+  @State refreshStatus: boolean = false; // 是否正在刷新
+  @State refreshingTabIndex: number = -1;
   @State refreshText: Resource = $r('app.string.refresh_text');
   // 高级数据源通过 @Provide 共享给子组件（@Consume 接收）
   // 独立的精选数据源与分类数据源，互不影响
@@ -46,9 +45,8 @@ export default struct TabBar {
   @Provide categoryDS: AdvancedListDataSource = new AdvancedListDataSource();
   // 当前选中的子类（每个类目对应一组子类）
   @State selectedSubcategoryId: string = '';
-  // 触摸位移（用于上拉加载更多）
-  private startTouchOffsetY: number = 0;
-  private endTouchOffsetY: number = 0;
+  // 下拉是否达到触发阈值
+  private canTriggerRefresh: boolean = false;
 
   @Builder
   firstTabBar() {
@@ -88,18 +86,34 @@ export default struct TabBar {
       // Record the y-coordinate pressed by the finger.
       case TouchType.Down:
         this.currentOffsetY = event.touches[0].y;
+        this.canTriggerRefresh = false;
         break;
       case TouchType.Move:
-      // Determine whether to refresh based on the drop-down offset.
-        this.refreshStatus = event.touches[0].y - this.currentOffsetY > MAX_OFFSET_Y;
+        // Determine whether to refresh based on the drop-down offset.
+        if (!this.refreshStatus) {
+          this.canTriggerRefresh = event.touches[0].y - this.currentOffsetY > MAX_OFFSET_Y;
+        }
         break;
       case TouchType.Cancel:
+        this.canTriggerRefresh = false;
         break;
       case TouchType.Up:
-      // Only simulation effect, no data request.
-        this.timer = setTimeout(() => {
-          this.refreshStatus = false;
-        }, REFRESH_TIME);
+        // 达到阈值才触发刷新
+        if (this.canTriggerRefresh && !this.refreshStatus) {
+          this.refreshingTabIndex = this.tabsIndex;
+          this.refreshStatus = true;
+
+          // 触发数据刷新：保持当前筛选条件，仅重置分页/重新加载
+          const ds: AdvancedListDataSource = (this.tabsIndex === 0) ? this.homeDS : this.categoryDS;
+          ds.refresh();
+
+          clearTimeout(this.timer);
+          this.timer = setTimeout(() => {
+            this.refreshStatus = false;
+            this.refreshingTabIndex = -1;
+          }, REFRESH_TIME);
+        }
+        this.canTriggerRefresh = false;
         break;
       default:
         break;
@@ -110,25 +124,44 @@ export default struct TabBar {
     clearTimeout(this.timer);
   }
 
+  @Builder
+  loadMoreFooter(ds: AdvancedListDataSource) {
+    Column() {
+      if (ds.hasMore) {
+        // 用一个极小的“哨兵”触发加载更多（进入可视区域时触发）
+        Row() {}
+          .width('100%')
+          .height(1)
+          .onAppear(() => {
+            ds.loadMore();
+          })
+      } else {
+        Text($r('app.string.to_bottom'))
+          .fontSize(NORMAL_FONT_SIZE)
+          .fontColor($r('app.color.gray'))
+          .width('100%')
+          .textAlign(TextAlign.Center)
+      }
+    }
+    .width('100%')
+    .padding(ds.hasMore ? { top: 0, bottom: 0 } : { top: 8, bottom: 16 })
+  }
+
   build() {
     Tabs() {
       TabContent() {
         // 首个 Tab：展示首页瀑布流 + 搜索筛选
         Scroll() {
           Column() {
-            if (this.refreshStatus) {
+            if (this.refreshStatus && this.refreshingTabIndex === 0) {
               PutDownRefresh({ refreshText: $refreshText })
             }
             // 搜索与筛选栏（关键词、排序与多重过滤）
             SearchAndFilterBar()
             // 瀑布流商品浏览（高矮图共存）
             WaterfallGoods()
-            // 底部“已到底了”提示
-            Text($r('app.string.to_bottom'))
-              .fontSize(NORMAL_FONT_SIZE)
-              .fontColor($r('app.color.gray'))
-              .width('100%')
-              .textAlign(TextAlign.Center)
+            // 触底加载更多 / 无更多提示
+            this.loadMoreFooter(this.homeDS)
           }
           .width(LAYOUT_WIDTH_OR_HEIGHT)
           .padding({ top: 0 })
@@ -141,25 +174,8 @@ export default struct TabBar {
         // 让内容自然从顶部开始，而不是强占满高导致视觉上下居中
         // .height(LAYOUT_WIDTH_OR_HEIGHT)
         .onTouch((event?: TouchEvent) => {
-          // 下拉刷新 + 上拉加载更多
+          // 下拉刷新
           this.putDownRefresh(event);
-          if (event === undefined) { return; }
-          switch (event.type) {
-            case TouchType.Down:
-              this.startTouchOffsetY = event.touches[0].y;
-              break;
-            case TouchType.Move:
-              this.endTouchOffsetY = event.touches[0].y;
-              // 上拉方向（向上滚动）
-              if (this.startTouchOffsetY - this.endTouchOffsetY > 0) {
-                this.homeDS.loadMore();
-              }
-              break;
-            case TouchType.Up:
-            case TouchType.Cancel:
-            default:
-              break;
-          }
         })
       }
       .tabBar(this.firstTabBar)
@@ -188,17 +204,13 @@ export default struct TabBar {
               .padding({ left: 12, right: 12, top: 0 })
 
               // 下拉刷新提示
-              if (this.refreshStatus) {
+              if (this.refreshStatus && this.refreshingTabIndex === (index !== undefined ? index + 1 : -1)) {
                 PutDownRefresh({ refreshText: $refreshText })
               }
               // 商品浏览区域：复用瀑布流组件显示筛选结果（分类专用）
               CategoryGoodsWaterfall()
-              // 底部“已到底了”提示
-              Text($r('app.string.to_bottom'))
-                .fontSize(NORMAL_FONT_SIZE)
-                .fontColor($r('app.color.gray'))
-                .width('100%')
-                .textAlign(TextAlign.Center)
+              // 触底加载更多 / 无更多提示
+              this.loadMoreFooter(this.categoryDS)
             }
             .width(LAYOUT_WIDTH_OR_HEIGHT)
             .padding({ top: 0 })
@@ -211,24 +223,8 @@ export default struct TabBar {
           // 让内容自然从顶部开始，而不是强占满高导致视觉上下居中
           // .height(LAYOUT_WIDTH_OR_HEIGHT)
           .onTouch((event?: TouchEvent) => {
-            // 下拉刷新 + 上拉加载更多
+            // 下拉刷新
             this.putDownRefresh(event);
-            if (event === undefined) { return; }
-            switch (event.type) {
-              case TouchType.Down:
-                this.startTouchOffsetY = event.touches[0].y;
-                break;
-              case TouchType.Move:
-                this.endTouchOffsetY = event.touches[0].y;
-                if (this.startTouchOffsetY - this.endTouchOffsetY > 0) {
-                  this.categoryDS.loadMore();
-                }
-                break;
-              case TouchType.Up:
-              case TouchType.Cancel:
-              default:
-                break;
-            }
           })
           // Scroll 不支持 justifyContent，这里移除并保持尺寸设置在前文
         }
@@ -246,7 +242,7 @@ export default struct TabBar {
         const catIdx: number = index - 1; // categories 与 initTabBarData 顺序一致
         if (catIdx >= 0 && catIdx < categories.length) {
           this.selectedSubcategoryId = '';
-            this.categoryDS.setCategory(categories[catIdx].id, undefined);
+          this.categoryDS.setCategory(categories[catIdx].id, undefined);
         }
       }
     })
