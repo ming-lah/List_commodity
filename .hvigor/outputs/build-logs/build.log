@@ -1,0 +1,143 @@
+[2025-12-29T10:46:08.557] [DEBUG] debug-file - default@CompileArkTS work[17] done.
+[2025-12-29T10:46:08.557] [DEBUG] debug-file - A work dispatched to worker[14] failed because unable to get work from ready queue.
+[2025-12-29T10:46:09.378] [DEBUG] debug-file - worker[4] has one work done.
+[2025-12-29T10:46:09.380] [DEBUG] debug-file - default@CompileArkTS work[16] done.
+[2025-12-29T10:46:09.380] [DEBUG] debug-file - A work dispatched to worker[4] failed because unable to get work from ready queue.
+[2025-12-29T10:46:09.382] [INFO] debug-file - Finished :entry:default@CompileArkTS... after 2 s 89 ms 
+[2025-12-29T10:46:09.383] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2025-12-29T10:46:09.383] [DEBUG] debug-file - File: 'D:\Projects\List_commodity\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2025-12-29T10:46:09.383] [DEBUG] debug-file - Task 'entry:default@GeneratePkgModuleJson' cost while wrapping incremental declarations: 1 ms 
+[2025-12-29T10:46:09.384] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson pre-execution cost: 1 ms .
+[2025-12-29T10:46:09.384] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.08927154541015625
+[2025-12-29T10:46:09.384] [INFO] debug-file - UP-TO-DATE :entry:default@GeneratePkgModuleJson...  
+[2025-12-29T10:46:09.385] [DEBUG] debug-file - Executing task :entry:default@ProcessCompiledResources
+[2025-12-29T10:46:09.385] [DEBUG] debug-file - File: 'D:\Projects\List_commodity\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2025-12-29T10:46:09.385] [DEBUG] debug-file - Task 'entry:default@ProcessCompiledResources' cost while wrapping incremental declarations: 1 ms 
+[2025-12-29T10:46:09.386] [DEBUG] debug-file - entry : default@ProcessCompiledResources cost memory 0.064910888671875
+[2025-12-29T10:46:09.386] [DEBUG] debug-file - runTaskFromQueue task cost before running: 2 s 331 ms 
+[2025-12-29T10:46:09.386] [INFO] debug-file - Finished :entry:default@ProcessCompiledResources... after 1 ms 
+[2025-12-29T10:46:09.388] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2025-12-29T10:46:09.395] [DEBUG] debug-file - entry:default@PackageHap is not up-to-date, since the input file 'D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets' has been changed.
+[2025-12-29T10:46:09.395] [DEBUG] debug-file - Incremental task entry:default@PackageHap pre-execution cost: 6 ms .
+[2025-12-29T10:46:09.397] [DEBUG] debug-file - Use tool [D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\lib\app_packing_tool.jar]
+ [
+  'java',
+  '-Dfile.encoding=GBK',
+  '-jar',
+  'D:\\Program\\DevEco Studio\\sdk\\default\\openharmony\\toolchains\\lib\\app_packing_tool.jar',
+  '--mode',
+  'hap',
+  '--force',
+  'true',
+  '--lib-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\stripped_native_libs\\default',
+  '--json-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\package\\default\\module.json',
+  '--resources-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\resources',
+  '--index-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\res\\default\\resources.index',
+  '--pack-info-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\outputs\\default\\pack.info',
+  '--out-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\outputs\\default\\entry-default-unsigned.hap',
+  '--ets-path',
+  'D:\\Projects\\List_commodity\\entry\\build\\default\\intermediates\\loader_out\\default\\ets'
+]
+[2025-12-29T10:46:10.230] [DEBUG] debug-file - java daemon socket received message:{"code":0,"message":"pack success"}
+[2025-12-29T10:46:10.240] [DEBUG] debug-file - entry : default@PackageHap cost memory -0.8874053955078125
+[2025-12-29T10:46:10.240] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 185 ms 
+[2025-12-29T10:46:10.241] [INFO] debug-file - Finished :entry:default@PackageHap... after 853 ms 
+[2025-12-29T10:46:10.243] [DEBUG] debug-file - Executing task :entry:default@PackingCheck
+[2025-12-29T10:46:10.254] [DEBUG] debug-file - entry : default@PackingCheck cost memory 0.36638641357421875
+[2025-12-29T10:46:10.254] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 200 ms 
+[2025-12-29T10:46:10.254] [INFO] debug-file - Finished :entry:default@PackingCheck... after 12 ms 
+[2025-12-29T10:46:10.256] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2025-12-29T10:46:10.257] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in D:\Projects\List_commodity\build-profile.json5.
+[2025-12-29T10:46:10.258] [DEBUG] debug-file - entry:default@SignHap is not up-to-date, since the input file 'D:\Projects\List_commodity\entry\build\default\outputs\default\entry-default-unsigned.hap' has been changed.
+[2025-12-29T10:46:10.258] [DEBUG] debug-file - Incremental task entry:default@SignHap pre-execution cost: 1 ms .
+[2025-12-29T10:46:10.259] [DEBUG] debug-file - entry : default@SignHap cost memory 0.1053924560546875
+[2025-12-29T10:46:10.259] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 204 ms 
+[2025-12-29T10:46:10.259] [INFO] debug-file - Finished :entry:default@SignHap... after 3 ms 
+[2025-12-29T10:46:10.262] [DEBUG] debug-file - Executing task :entry:default@CollectDebugSymbol
+[2025-12-29T10:46:10.263] [DEBUG] debug-file - entry : default@CollectDebugSymbol cost memory 0.09064483642578125
+[2025-12-29T10:46:10.263] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 208 ms 
+[2025-12-29T10:46:10.263] [INFO] debug-file - Finished :entry:default@CollectDebugSymbol... after 2 ms 
+[2025-12-29T10:46:10.264] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2025-12-29T10:46:10.264] [DEBUG] debug-file - entry : assembleHap cost memory 0.0139617919921875
+[2025-12-29T10:46:10.264] [DEBUG] debug-file - runTaskFromQueue task cost before running: 3 s 209 ms 
+[2025-12-29T10:46:10.264] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2025-12-29T10:46:10.281] [INFO] debug-file - BUILD SUCCESSFUL in 3 s 226 ms 
+[2025-12-29T10:46:10.281] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2025-12-29T10:46:10.281] [DEBUG] debug-file - Update task entry:default@CreateModuleInfo output file:D:\Projects\List_commodity\entry\build\default\generated\profile\default\ModuleInfo.ts cache.
+[2025-12-29T10:46:10.281] [DEBUG] debug-file - Incremental task entry:default@CreateModuleInfo post-execution cost:1 ms .
+[2025-12-29T10:46:10.281] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateMetadata is up-to-date.
+[2025-12-29T10:46:10.281] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MergeProfile is up-to-date.
+[2025-12-29T10:46:10.282] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CreateBuildProfile is up-to-date.
+[2025-12-29T10:46:10.282] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:D:\Projects\List_commodity\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2025-12-29T10:46:10.283] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:2 ms .
+[2025-12-29T10:46:10.283] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:D:\Projects\List_commodity\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2025-12-29T10:46:10.283] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2025-12-29T10:46:10.284] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MakePackInfo is up-to-date.
+[2025-12-29T10:46:10.284] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program\DevEco Studio\sdk\default\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2025-12-29T10:46:10.284] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:D:\Program\DevEco Studio\sdk\default\openharmony\ets\api\device-define cache by regenerate.
+[2025-12-29T10:46:10.285] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:D:\Projects\List_commodity\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2025-12-29T10:46:10.285] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:2 ms .
+[2025-12-29T10:46:10.285] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessProfile is up-to-date.
+[2025-12-29T10:46:10.285] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessRouterMap is up-to-date.
+[2025-12-29T10:46:10.285] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessShareConfig is up-to-date.
+[2025-12-29T10:46:10.286] [DEBUG] debug-file - Update task entry:default@ProcessStartupConfig output file:D:\Projects\List_commodity\entry\build\default\intermediates\startup\default\startup_config.json cache.
+[2025-12-29T10:46:10.286] [DEBUG] debug-file - Incremental task entry:default@ProcessStartupConfig post-execution cost:1 ms .
+[2025-12-29T10:46:10.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessResource is up-to-date.
+[2025-12-29T10:46:10.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateLoaderJson is up-to-date.
+[2025-12-29T10:46:10.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessLibs is up-to-date.
+[2025-12-29T10:46:10.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileResource is up-to-date.
+[2025-12-29T10:46:10.286] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@DoNativeStrip is up-to-date.
+[2025-12-29T10:46:10.287] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader\default cache by regenerate.
+[2025-12-29T10:46:10.288] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2025-12-29T10:46:10.288] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2025-12-29T10:46:10.288] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2025-12-29T10:46:10.288] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\src\main\ets cache by regenerate.
+[2025-12-29T10:46:10.291] [DEBUG] debug-file - Update task entry:default@CompileArkTS input file:D:\Projects\List_commodity\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2025-12-29T10:46:10.291] [DEBUG] debug-file - Update task entry:default@CompileArkTS output file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets cache.
+[2025-12-29T10:46:10.292] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS post-execution cost:7 ms .
+[2025-12-29T10:46:10.294] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader\default cache by regenerate.
+[2025-12-29T10:46:10.294] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2025-12-29T10:46:10.295] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2025-12-29T10:46:10.295] [DEBUG] debug-file - Update task entry:default@BuildJS input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2025-12-29T10:46:10.295] [DEBUG] debug-file - Update task entry:default@BuildJS output file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\js cache.
+[2025-12-29T10:46:10.296] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:3 ms .
+[2025-12-29T10:46:10.296] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CacheNativeLibs is up-to-date.
+[2025-12-29T10:46:10.296] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GeneratePkgModuleJson is up-to-date.
+[2025-12-29T10:46:10.296] [DEBUG] debug-file - Incremental task entry:default@ProcessCompiledResources post-execution cost:1 ms .
+[2025-12-29T10:46:10.296] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\stripped_native_libs\default cache by regenerate.
+[2025-12-29T10:46:10.297] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\module.json cache by regenerate.
+[2025-12-29T10:46:10.297] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources cache by regenerate.
+[2025-12-29T10:46:10.299] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\res\default\resources.index cache by regenerate.
+[2025-12-29T10:46:10.299] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\outputs\default\pack.info cache by regenerate.
+[2025-12-29T10:46:10.299] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets cache from map.
+[2025-12-29T10:46:10.299] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2025-12-29T10:46:10.299] [DEBUG] debug-file - Update task entry:default@PackageHap input file:D:\Projects\List_commodity\entry\build\default\generated\profile\default\BuildProfile.ets cache by regenerate.
+[2025-12-29T10:46:10.300] [DEBUG] debug-file - Update task entry:default@PackageHap output file:D:\Projects\List_commodity\entry\build\default\outputs\default\entry-default-unsigned.hap cache.
+[2025-12-29T10:46:10.300] [DEBUG] debug-file - Update task entry:default@PackageHap output file:D:\Projects\List_commodity\entry\build\default\intermediates\source_map\default\sourceMaps.map cache.
+[2025-12-29T10:46:10.301] [DEBUG] debug-file - Update task entry:default@PackageHap output file:D:\Projects\List_commodity\entry\build\default\outputs\default\mapping\sourceMaps.map cache.
+[2025-12-29T10:46:10.301] [DEBUG] debug-file - Incremental task entry:default@PackageHap post-execution cost:6 ms .
+[2025-12-29T10:46:10.301] [DEBUG] debug-file - Update task entry:default@SignHap input file:D:\Projects\List_commodity\entry\build\default\outputs\default\entry-default-unsigned.hap cache from map.
+[2025-12-29T10:46:10.301] [DEBUG] debug-file - Update task entry:default@SignHap output file:D:\Projects\List_commodity\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2025-12-29T10:46:10.301] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:1 ms .
+[2025-12-29T10:46:10.302] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol input file:D:\Projects\List_commodity\entry\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2025-12-29T10:46:10.302] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol input file:D:\Projects\List_commodity\entry\build\default\intermediates\libs\default cache by regenerate.
+[2025-12-29T10:46:10.303] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol output file:D:\Projects\List_commodity\entry\build\default\outputs\default\symbol cache.
+[2025-12-29T10:46:10.303] [DEBUG] debug-file - Incremental task entry:default@CollectDebugSymbol post-execution cost:2 ms .
+[2025-12-29T10:46:10.336] [DEBUG] debug-file - Cleanup worker 14.
+[2025-12-29T10:46:10.336] [DEBUG] debug-file - Worker 14 has been cleaned up.
+[2025-12-29T10:46:10.336] [DEBUG] debug-file - Current idle worker size: 1.
+[2025-12-29T10:46:10.336] [DEBUG] debug-file - Current resident worker size: 2.
+[2025-12-29T10:46:10.337] [DEBUG] debug-file - hvigor build process will be closed.
+[2025-12-29T10:46:10.338] [DEBUG] debug-file - java daemon socket close code:1000 reason:close by user
+[2025-12-29T10:46:10.343] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-29T10:46:10.343] [DEBUG] debug-file - session manager: send message to worker process.
+[2025-12-29T10:46:10.344] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-29T10:46:10.344] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2025-12-29T10:46:10.354] [DEBUG] debug-file - worker[14] exits with exit code 1.
