@@ -133,7 +133,7 @@ export default class WaterfallGoods extends ViewPU {
                 this.GoodsCard.bind(this)(g);
                 Column.pop();
             };
-            this.forEachUpdateFunction(elmtId, this.homeDS.getGoods().filter((_, idx: number) => idx % 2 === 0), forEachItemGenFunction);
+            this.forEachUpdateFunction(elmtId, this.homeDS.getLeftGoods(), forEachItemGenFunction);
         }, ForEach);
         ForEach.pop();
         // 左列：偶数索引
@@ -156,7 +156,7 @@ export default class WaterfallGoods extends ViewPU {
                 this.GoodsCard.bind(this)(g);
                 Column.pop();
             };
-            this.forEachUpdateFunction(elmtId, this.homeDS.getGoods().filter((_, idx: number) => idx % 2 === 1), forEachItemGenFunction);
+            this.forEachUpdateFunction(elmtId, this.homeDS.getRightGoods(), forEachItemGenFunction);
         }, ForEach);
         ForEach.pop();
         // 右列：奇数索引

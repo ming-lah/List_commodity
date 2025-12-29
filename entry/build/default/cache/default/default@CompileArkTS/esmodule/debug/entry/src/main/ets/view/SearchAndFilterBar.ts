@@ -82,8 +82,7 @@ export default class SearchAndFilterBar extends ViewPU {
     }
     // 移除标签过滤，仅保留关键词与价格相关筛选
     private applyAll() {
-        this.homeDS.setKeyword(this.keyword);
-        this.homeDS.setPriceRange(this.minPrice, this.maxPrice);
+        this.homeDS.setKeywordAndPriceRange(this.keyword, this.minPrice, this.maxPrice);
     }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {

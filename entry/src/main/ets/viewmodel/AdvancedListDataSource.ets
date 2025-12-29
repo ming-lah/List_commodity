@@ -23,6 +23,10 @@ export default class AdvancedListDataSource {
   // 当前已加载（分页后）可展示的商品结果（被观察，修改会触发 UI 更新）
   filteredGoods: Goods[] = [];
 
+  // 瀑布流双列数据（按 filteredGoods 的索引奇偶拆分）
+  leftGoods: Goods[] = [];
+  rightGoods: Goods[] = [];
+
   // 分页状态：是否还有更多、是否正在加载更多
   hasMore: boolean = false;
   loadingMore: boolean = false;
@@ -37,6 +41,14 @@ export default class AdvancedListDataSource {
   // 对外访问
   getGoods(): Goods[] {
     return this.filteredGoods;
+  }
+
+  getLeftGoods(): Goods[] {
+    return this.leftGoods;
+  }
+
+  getRightGoods(): Goods[] {
+    return this.rightGoods;
   }
 
   // 设置搜索关键词
@@ -103,6 +115,7 @@ export default class AdvancedListDataSource {
       this.filteredGoods = this.filteredAllGoods.slice(0, nextEnd);
     }
     this.hasMore = this.filteredGoods.length < maxLength;
+    this.updateColumns();
     this.loadingMore = false;
   }
 
@@ -162,6 +175,21 @@ export default class AdvancedListDataSource {
       this.filteredGoods = this.filteredAllGoods.slice(0, keepEnd);
     }
     this.hasMore = this.filteredGoods.length < maxLength;
+    this.updateColumns();
     this.loadingMore = false;
+  }
+
+  private updateColumns() {
+    const left: Goods[] = [];
+    const right: Goods[] = [];
+    for (let i: number = 0; i < this.filteredGoods.length; i++) {
+      if (i % 2 === 0) {
+        left.push(this.filteredGoods[i]);
+      } else {
+        right.push(this.filteredGoods[i]);
+      }
+    }
+    this.leftGoods = left;
+    this.rightGoods = right;
   }
 }

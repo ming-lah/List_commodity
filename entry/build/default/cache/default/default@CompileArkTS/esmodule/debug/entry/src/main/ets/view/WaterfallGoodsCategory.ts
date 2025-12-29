@@ -113,7 +113,7 @@ export default class CategoryGoodsWaterfall extends ViewPU {
                 this.GoodsCard.bind(this)(g);
                 Column.pop();
             };
-            this.forEachUpdateFunction(elmtId, this.categoryDS.getGoods().filter((_, idx: number) => idx % 2 === 0), forEachItemGenFunction);
+            this.forEachUpdateFunction(elmtId, this.categoryDS.getLeftGoods(), forEachItemGenFunction);
         }, ForEach);
         ForEach.pop();
         Column.pop();
@@ -133,7 +133,7 @@ export default class CategoryGoodsWaterfall extends ViewPU {
                 this.GoodsCard.bind(this)(g);
                 Column.pop();
             };
-            this.forEachUpdateFunction(elmtId, this.categoryDS.getGoods().filter((_, idx: number) => idx % 2 === 1), forEachItemGenFunction);
+            this.forEachUpdateFunction(elmtId, this.categoryDS.getRightGoods(), forEachItemGenFunction);
         }, ForEach);
         ForEach.pop();
         Column.pop();

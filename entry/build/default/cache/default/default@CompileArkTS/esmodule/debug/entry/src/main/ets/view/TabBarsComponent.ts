@@ -6,12 +6,12 @@ interface TabBar_Params {
     timer?: number;
     tabsIndex?: number;
     refreshStatus?: boolean;
+    refreshingTabIndex?: number;
     refreshText?: Resource;
     homeDS?: AdvancedListDataSource;
     categoryDS?: AdvancedListDataSource;
     selectedSubcategoryId?: string;
-    startTouchOffsetY?: number;
-    endTouchOffsetY?: number;
+    canTriggerRefresh?: boolean;
 }
 import { initTabBarData } from "@bundle:com.example.list_harmony/entry/ets/viewmodel/InitialData";
 import { LAYOUT_WIDTH_OR_HEIGHT, NORMAL_FONT_SIZE, BIGGER_FONT_SIZE, MAX_OFFSET_Y, REFRESH_TIME, GOODS_EVALUATE_FONT_SIZE, MAX_LINES_TEXT } from "@bundle:com.example.list_harmony/entry/ets/common/CommonConstants";
@@ -32,14 +32,14 @@ export default class TabBar extends ViewPU {
         this.timer = 0;
         this.__tabsIndex = new ObservedPropertySimplePU(0, this, "tabsIndex");
         this.__refreshStatus = new ObservedPropertySimplePU(false, this, "refreshStatus");
+        this.__refreshingTabIndex = new ObservedPropertySimplePU(-1, this, "refreshingTabIndex");
         this.__refreshText = new ObservedPropertyObjectPU({ "id": 16777232, "type": 10003, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, this, "refreshText");
         this.__homeDS = new ObservedPropertyObjectPU(new AdvancedListDataSource(), this, "homeDS");
         this.addProvidedVar("homeDS", this.__homeDS, false);
         this.__categoryDS = new ObservedPropertyObjectPU(new AdvancedListDataSource(), this, "categoryDS");
         this.addProvidedVar("categoryDS", this.__categoryDS, false);
         this.__selectedSubcategoryId = new ObservedPropertySimplePU('', this, "selectedSubcategoryId");
-        this.startTouchOffsetY = 0;
-        this.endTouchOffsetY = 0;
+        this.canTriggerRefresh = false;
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
@@ -56,6 +56,9 @@ export default class TabBar extends ViewPU {
         if (params.refreshStatus !== undefined) {
             this.refreshStatus = params.refreshStatus;
         }
+        if (params.refreshingTabIndex !== undefined) {
+            this.refreshingTabIndex = params.refreshingTabIndex;
+        }
         if (params.refreshText !== undefined) {
             this.refreshText = params.refreshText;
         }
@@ -68,11 +71,8 @@ export default class TabBar extends ViewPU {
         if (params.selectedSubcategoryId !== undefined) {
             this.selectedSubcategoryId = params.selectedSubcategoryId;
         }
-        if (params.startTouchOffsetY !== undefined) {
-            this.startTouchOffsetY = params.startTouchOffsetY;
-        }
-        if (params.endTouchOffsetY !== undefined) {
-            this.endTouchOffsetY = params.endTouchOffsetY;
+        if (params.canTriggerRefresh !== undefined) {
+            this.canTriggerRefresh = params.canTriggerRefresh;
         }
     }
     updateStateVars(params: TabBar_Params) {
@@ -80,6 +80,7 @@ export default class TabBar extends ViewPU {
     purgeVariableDependenciesOnElmtId(rmElmtId) {
         this.__tabsIndex.purgeDependencyOnElmtId(rmElmtId);
         this.__refreshStatus.purgeDependencyOnElmtId(rmElmtId);
+        this.__refreshingTabIndex.purgeDependencyOnElmtId(rmElmtId);
         this.__refreshText.purgeDependencyOnElmtId(rmElmtId);
         this.__homeDS.purgeDependencyOnElmtId(rmElmtId);
         this.__categoryDS.purgeDependencyOnElmtId(rmElmtId);
@@ -88,6 +89,7 @@ export default class TabBar extends ViewPU {
     aboutToBeDeleted() {
         this.__tabsIndex.aboutToBeDeleted();
         this.__refreshStatus.aboutToBeDeleted();
+        this.__refreshingTabIndex.aboutToBeDeleted();
         this.__refreshText.aboutToBeDeleted();
         this.__homeDS.aboutToBeDeleted();
         this.__categoryDS.aboutToBeDeleted();
@@ -104,12 +106,19 @@ export default class TabBar extends ViewPU {
     set tabsIndex(newValue: number) {
         this.__tabsIndex.set(newValue);
     }
-    private __refreshStatus: ObservedPropertySimplePU<boolean>;
+    private __refreshStatus: ObservedPropertySimplePU<boolean>; // 是否正在刷新
     get refreshStatus() {
         return this.__refreshStatus.get();
     }
     set refreshStatus(newValue: boolean) {
         this.__refreshStatus.set(newValue);
+    }
+    private __refreshingTabIndex: ObservedPropertySimplePU<number>;
+    get refreshingTabIndex() {
+        return this.__refreshingTabIndex.get();
+    }
+    set refreshingTabIndex(newValue: number) {
+        this.__refreshingTabIndex.set(newValue);
     }
     private __refreshText: ObservedPropertyObjectPU<Resource>;
     get refreshText() {
@@ -142,9 +151,8 @@ export default class TabBar extends ViewPU {
     set selectedSubcategoryId(newValue: string) {
         this.__selectedSubcategoryId.set(newValue);
     }
-    // 触摸位移（用于上拉加载更多）
-    private startTouchOffsetY: number;
-    private endTouchOffsetY: number;
+    // 下拉是否达到触发阈值
+    private canTriggerRefresh: boolean;
     firstTabBar(parent = null) {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
@@ -189,18 +197,32 @@ export default class TabBar extends ViewPU {
             // Record the y-coordinate pressed by the finger.
             case TouchType.Down:
                 this.currentOffsetY = event.touches[0].y;
+                this.canTriggerRefresh = false;
                 break;
             case TouchType.Move:
                 // Determine whether to refresh based on the drop-down offset.
-                this.refreshStatus = event.touches[0].y - this.currentOffsetY > MAX_OFFSET_Y;
+                if (!this.refreshStatus) {
+                    this.canTriggerRefresh = event.touches[0].y - this.currentOffsetY > MAX_OFFSET_Y;
+                }
                 break;
             case TouchType.Cancel:
+                this.canTriggerRefresh = false;
                 break;
             case TouchType.Up:
-                // Only simulation effect, no data request.
-                this.timer = setTimeout(() => {
-                    this.refreshStatus = false;
-                }, REFRESH_TIME);
+                // 达到阈值才触发刷新
+                if (this.canTriggerRefresh && !this.refreshStatus) {
+                    this.refreshingTabIndex = this.tabsIndex;
+                    this.refreshStatus = true;
+                    // 触发数据刷新：保持当前筛选条件，仅重置分页/重新加载
+                    const ds: AdvancedListDataSource = (this.tabsIndex === 0) ? this.homeDS : this.categoryDS;
+                    ds.refresh();
+                    clearTimeout(this.timer);
+                    this.timer = setTimeout(() => {
+                        this.refreshStatus = false;
+                        this.refreshingTabIndex = -1;
+                    }, REFRESH_TIME);
+                }
+                this.canTriggerRefresh = false;
                 break;
             default:
                 break;
@@ -208,6 +230,48 @@ export default class TabBar extends ViewPU {
     }
     aboutToDisappear() {
         clearTimeout(this.timer);
+    }
+    loadMoreFooter(ds: AdvancedListDataSource, parent = null) {
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Column.create();
+            Column.width('100%');
+            Column.padding(ds.hasMore ? { top: 0, bottom: 0 } : { top: 8, bottom: 16 });
+        }, Column);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            If.create();
+            if (ds.hasMore) {
+                this.ifElseBranchUpdateFunction(0, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        // 用一个极小的“哨兵”触发加载更多（进入可视区域时触发）
+                        Row.create();
+                        // 用一个极小的“哨兵”触发加载更多（进入可视区域时触发）
+                        Row.width('100%');
+                        // 用一个极小的“哨兵”触发加载更多（进入可视区域时触发）
+                        Row.height(1);
+                        // 用一个极小的“哨兵”触发加载更多（进入可视区域时触发）
+                        Row.onAppear(() => {
+                            ds.loadMore();
+                        });
+                    }, Row);
+                    // 用一个极小的“哨兵”触发加载更多（进入可视区域时触发）
+                    Row.pop();
+                });
+            }
+            else {
+                this.ifElseBranchUpdateFunction(1, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Text.create({ "id": 16777235, "type": 10003, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+                        Text.fontSize(NORMAL_FONT_SIZE);
+                        Text.fontColor({ "id": 16777239, "type": 10001, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+                        Text.width('100%');
+                        Text.textAlign(TextAlign.Center);
+                    }, Text);
+                    Text.pop();
+                });
+            }
+        }, If);
+        If.pop();
+        Column.pop();
     }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -243,27 +307,8 @@ export default class TabBar extends ViewPU {
                     Scroll.width(LAYOUT_WIDTH_OR_HEIGHT);
                     // 首个 Tab：展示首页瀑布流 + 搜索筛选
                     Scroll.onTouch((event?: TouchEvent) => {
-                        // 下拉刷新 + 上拉加载更多
+                        // 下拉刷新
                         this.putDownRefresh(event);
-                        if (event === undefined) {
-                            return;
-                        }
-                        switch (event.type) {
-                            case TouchType.Down:
-                                this.startTouchOffsetY = event.touches[0].y;
-                                break;
-                            case TouchType.Move:
-                                this.endTouchOffsetY = event.touches[0].y;
-                                // 上拉方向（向上滚动）
-                                if (this.startTouchOffsetY - this.endTouchOffsetY > 0) {
-                                    this.homeDS.loadMore();
-                                }
-                                break;
-                            case TouchType.Up:
-                            case TouchType.Cancel:
-                            default:
-                                break;
-                        }
                     });
                 }, Scroll);
                 this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -275,12 +320,12 @@ export default class TabBar extends ViewPU {
                 }, Column);
                 this.observeComponentCreation2((elmtId, isInitialRender) => {
                     If.create();
-                    if (this.refreshStatus) {
+                    if (this.refreshStatus && this.refreshingTabIndex === 0) {
                         this.ifElseBranchUpdateFunction(0, () => {
                             {
                                 this.observeComponentCreation2((elmtId, isInitialRender) => {
                                     if (isInitialRender) {
-                                        let componentCall = new PutDownRefresh(this, { refreshText: this.__refreshText }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 120, col: 15 });
+                                        let componentCall = new PutDownRefresh(this, { refreshText: this.__refreshText }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 157, col: 15 });
                                         ViewPU.create(componentCall);
                                         let paramsLambda = () => {
                                             return {
@@ -308,7 +353,7 @@ export default class TabBar extends ViewPU {
                         if (isInitialRender) {
                             let componentCall = new 
                             // 搜索与筛选栏（关键词、排序与多重过滤）
-                            SearchAndFilterBar(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 123, col: 13 });
+                            SearchAndFilterBar(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 160, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -325,7 +370,7 @@ export default class TabBar extends ViewPU {
                         if (isInitialRender) {
                             let componentCall = new 
                             // 瀑布流商品浏览（高矮图共存）
-                            WaterfallGoods(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 125, col: 13 });
+                            WaterfallGoods(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 162, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -337,20 +382,8 @@ export default class TabBar extends ViewPU {
                         }
                     }, { name: "WaterfallGoods" });
                 }
-                this.observeComponentCreation2((elmtId, isInitialRender) => {
-                    // 底部“已到底了”提示
-                    Text.create({ "id": 16777235, "type": 10003, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
-                    // 底部“已到底了”提示
-                    Text.fontSize(NORMAL_FONT_SIZE);
-                    // 底部“已到底了”提示
-                    Text.fontColor({ "id": 16777239, "type": 10001, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
-                    // 底部“已到底了”提示
-                    Text.width('100%');
-                    // 底部“已到底了”提示
-                    Text.textAlign(TextAlign.Center);
-                }, Text);
-                // 底部“已到底了”提示
-                Text.pop();
+                // 触底加载更多 / 无更多提示
+                this.loadMoreFooter.bind(this)(ObservedObject.GetRawObject(this.homeDS));
                 Column.pop();
                 // 首个 Tab：展示首页瀑布流 + 搜索筛选
                 Scroll.pop();
@@ -376,26 +409,8 @@ export default class TabBar extends ViewPU {
                             Scroll.width(LAYOUT_WIDTH_OR_HEIGHT);
                             // 分类页使用 Scroll，支持下拉刷新与上拉加载更多
                             Scroll.onTouch((event?: TouchEvent) => {
-                                // 下拉刷新 + 上拉加载更多
+                                // 下拉刷新
                                 this.putDownRefresh(event);
-                                if (event === undefined) {
-                                    return;
-                                }
-                                switch (event.type) {
-                                    case TouchType.Down:
-                                        this.startTouchOffsetY = event.touches[0].y;
-                                        break;
-                                    case TouchType.Move:
-                                        this.endTouchOffsetY = event.touches[0].y;
-                                        if (this.startTouchOffsetY - this.endTouchOffsetY > 0) {
-                                            this.categoryDS.loadMore();
-                                        }
-                                        break;
-                                    case TouchType.Up:
-                                    case TouchType.Cancel:
-                                    default:
-                                        break;
-                                }
                             });
                         }, Scroll);
                         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -438,12 +453,12 @@ export default class TabBar extends ViewPU {
                         this.observeComponentCreation2((elmtId, isInitialRender) => {
                             If.create();
                             // 下拉刷新提示
-                            if (this.refreshStatus) {
+                            if (this.refreshStatus && this.refreshingTabIndex === (index !== undefined ? index + 1 : -1)) {
                                 this.ifElseBranchUpdateFunction(0, () => {
                                     {
                                         this.observeComponentCreation2((elmtId, isInitialRender) => {
                                             if (isInitialRender) {
-                                                let componentCall = new PutDownRefresh(this, { refreshText: this.__refreshText }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 192, col: 17 });
+                                                let componentCall = new PutDownRefresh(this, { refreshText: this.__refreshText }, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 208, col: 17 });
                                                 ViewPU.create(componentCall);
                                                 let paramsLambda = () => {
                                                     return {
@@ -471,7 +486,7 @@ export default class TabBar extends ViewPU {
                                 if (isInitialRender) {
                                     let componentCall = new 
                                     // 商品浏览区域：复用瀑布流组件显示筛选结果（分类专用）
-                                    CategoryGoodsWaterfall(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 195, col: 15 });
+                                    CategoryGoodsWaterfall(this, {}, undefined, elmtId, () => { }, { page: "entry/src/main/ets/view/TabBarsComponent.ets", line: 211, col: 15 });
                                     ViewPU.create(componentCall);
                                     let paramsLambda = () => {
                                         return {};
@@ -483,20 +498,8 @@ export default class TabBar extends ViewPU {
                                 }
                             }, { name: "CategoryGoodsWaterfall" });
                         }
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            // 底部“已到底了”提示
-                            Text.create({ "id": 16777235, "type": 10003, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
-                            // 底部“已到底了”提示
-                            Text.fontSize(NORMAL_FONT_SIZE);
-                            // 底部“已到底了”提示
-                            Text.fontColor({ "id": 16777239, "type": 10001, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
-                            // 底部“已到底了”提示
-                            Text.width('100%');
-                            // 底部“已到底了”提示
-                            Text.textAlign(TextAlign.Center);
-                        }, Text);
-                        // 底部“已到底了”提示
-                        Text.pop();
+                        // 触底加载更多 / 无更多提示
+                        this.loadMoreFooter.bind(this)(ObservedObject.GetRawObject(this.categoryDS));
                         Column.pop();
                         // 分类页使用 Scroll，支持下拉刷新与上拉加载更多
                         Scroll.pop();

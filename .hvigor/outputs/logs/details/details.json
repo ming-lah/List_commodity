@@ -5,7 +5,7 @@
         "MODULE_NAME": "1043bfc77febe75fafec0c4309faccf1",
         "API_TYPE": "stageMode",
         "INCREMENTAL_TASKS": {
-          "COMPILE_ARKTS": false
+          "COMPILE_ARKTS": true
         }
       }
     ],
@@ -19,37 +19,23 @@
     "IS_HVIGORFILE_TYPE_CHECK": false,
     "TASK_TIME": {
       "1043bfc77febe75fafec0c4309faccf1": {
-        "CreateModuleInfo": 885400,
-        "GenerateMetadata": 6918800,
-        "ConfigureCmake": 785500,
-        "MergeProfile": 6328500,
-        "CreateBuildProfile": 4632900,
-        "PreCheckSyscap": 825600,
-        "GeneratePkgContextInfo": 8067000,
-        "ProcessIntegratedHsp": 1178900,
-        "BuildNativeWithCmake": 558200,
-        "MakePackInfo": 5345200,
-        "SyscapTransform": 2968200,
-        "ProcessProfile": 139879900,
-        "ProcessRouterMap": 6387700,
-        "ProcessShareConfig": 47998100,
-        "ProcessStartupConfig": 2356900,
-        "BuildNativeWithNinja": 2206800,
-        "ProcessResource": 21227100,
-        "GenerateLoaderJson": 16559500,
-        "ProcessLibs": 14144700,
-        "CompileResource": 1390954300,
-        "DoNativeStrip": 4528000,
-        "BuildJS": 6406300,
-        "CacheNativeLibs": 1837242100,
-        "CompileArkTS": 12899815000,
-        "GeneratePkgModuleJson": 5310000,
-        "ProcessCompiledResources": 3617500,
-        "PackageHap": 901085200,
-        "PackingCheck": 13329100,
-        "SignHap": 3010500,
-        "CollectDebugSymbol": 2041500,
-        "assembleHap": 1951400
+        "CreateModuleInfo": 909500,
+        "ConfigureCmake": 377200,
+        "PreCheckSyscap": 566100,
+        "GeneratePkgContextInfo": 4536700,
+        "ProcessIntegratedHsp": 762900,
+        "BuildNativeWithCmake": 409600,
+        "SyscapTransform": 2659100,
+        "ProcessStartupConfig": 1268700,
+        "BuildNativeWithNinja": 771700,
+        "BuildJS": 3294600,
+        "CompileArkTS": 2092098400,
+        "ProcessCompiledResources": 897800,
+        "PackageHap": 852913100,
+        "PackingCheck": 11330400,
+        "SignHap": 2782800,
+        "CollectDebugSymbol": 1550300,
+        "assembleHap": 509100
       }
     },
     "APIS": [
@@ -74,7 +60,7 @@
       "getStartParams"
     ],
     "CONFIG_PROPERTIES": {},
-    "TOTAL_TIME": 15794436400,
-    "BUILD_ID": "202512231149347010"
+    "TOTAL_TIME": 3225207800,
+    "BUILD_ID": "202512291046070550"
   }
 }

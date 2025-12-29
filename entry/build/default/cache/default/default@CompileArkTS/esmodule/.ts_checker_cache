@@ -1450,11 +1450,10 @@
       "error": false
     },
     "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\TabBarsComponent.ets": {
-      "mtimeMs": 1766461239419.7927,
+      "mtimeMs": 1766975418566.9607,
       "children": [
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\viewmodel\\InitialData.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\common\\CommonConstants.ets",
-        "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\GoodsListComponent.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\PutDownRefreshLayout.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\WaterfallGoodsComponent.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\WaterfallGoodsCategory.ets",
@@ -1526,7 +1525,7 @@
       "error": false
     },
     "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\WaterfallGoodsComponent.ets": {
-      "mtimeMs": 1766461239422.7942,
+      "mtimeMs": 1766976020555.67,
       "children": [
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\models\\Goods.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\viewmodel\\AdvancedListDataSource.ets",
@@ -1538,7 +1537,7 @@
       "error": false
     },
     "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\WaterfallGoodsCategory.ets": {
-      "mtimeMs": 1766461239420.7927,
+      "mtimeMs": 1766976031186.7683,
       "children": [
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\models\\Goods.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\viewmodel\\AdvancedListDataSource.ets",
@@ -1550,7 +1549,7 @@
       "error": false
     },
     "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\view\\SearchAndFilterBar.ets": {
-      "mtimeMs": 1766461239419.7927,
+      "mtimeMs": 1766910257575.828,
       "children": [
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\viewmodel\\AdvancedListDataSource.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\models\\Goods.ets",
@@ -1562,7 +1561,7 @@
       "error": false
     },
     "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\viewmodel\\AdvancedListDataSource.ets": {
-      "mtimeMs": 1766461239423.7937,
+      "mtimeMs": 1766976010095.236,
       "children": [
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\models\\Goods.ets",
         "D:\\Projects\\List_commodity\\entry\\src\\main\\ets\\viewmodel\\GoodsRepository.ets",
